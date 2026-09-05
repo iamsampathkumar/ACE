@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angel College of Engineering and Technology | ACET, Tirupur</title>
+<meta name="description" content="Angel College of Engineering and Technology (ACET), Angel Nagar, P.K. Palayam, Tirupur — approved by AICTE, affiliated to Anna University, Chennai. B.E./B.Tech in CSE, ECE, EEE, Mechanical, Civil &amp; Fashion Technology, M.E. programmes, established 2007 under Angel Institutions Trust.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- Swiper -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
+
+<style>
+/* ============================================================
+   ANGEL COLLEGE OF ENGINEERING AND TECHNOLOGY — DESIGN SYSTEM
+   Palette: Primary Royal Blue #1B44B0 / Accent Crimson #C81E3A / Deep Navy #0B1F4D
+   Signature gradient: linear-gradient(120.16deg, #1B44B0 6.19%, #0B1F4D 100.01%)
+   Type: Jost (display/headings) + Inter (body)
+   ============================================================ */
+:root{
+  --royal:#1B44B0;
+  --royal-deep:#122E7C;
+  --royal-soft:#EAF0FC;
+  --navy:#0B1F4D;
+  --navy-deep:#071330;
+  --crimson:#C81E3A;
+  --crimson-light:#E14259;
+  --crimson-deep:#8C0F26;
+  --brand-gradient:linear-gradient(120.16deg, #1B44B0 6.19%, #0B1F4D 100.01%);
+  --bg:#F5F7FC;
+  --ink:#141B30;
+  --muted:#5B6478;
+  --white:#ffffff;
+  --radius:16px;
+  --radius-sm:10px;
+  --shadow-sm:0 6px 18px rgba(11,31,77,.09);
+  --shadow-md:0 14px 34px rgba(11,31,77,.16);
+  --font-d:'Jost',sans-serif;
+  --font-b:'Inter',sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
+body{
+  font-family:var(--font-b);color:var(--ink);background:var(--bg);margin:0;
+  padding-top:170px;overflow-x:hidden;max-width:100%;overscroll-behavior-x:none;position:relative;
+}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-d);color:var(--navy);margin:0;}
+p{color:var(--muted);line-height:1.75;text-align:justify;text-justify:inter-word;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+.container-xl{max-width:1260px;margin:0 auto;padding:0 20px;}
+@media (max-width:575.98px){p{text-align:left;text-justify:auto;}}
+
+/* ---------- Section scaffolding ---------- */
+.section{padding:88px 0;position:relative;}
+.section-tight{padding:60px 0;}
+.section-navy{background:linear-gradient(120.16deg,var(--royal) 6.19%,var(--navy) 100.01%);color:#fff;}
+.section-navy p{color:rgba(255,255,255,.72);}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:700;
+  font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--royal);margin-bottom:10px;
+}
+.eyebrow::before{content:'';width:22px;height:2px;background:var(--crimson);display:inline-block;}
+.section-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:700;line-height:1.2;}
+.section-title-rule{width:64px;height:4px;background:linear-gradient(90deg,var(--royal),var(--crimson));border-radius:4px;margin-top:16px;}
+.section-navy .section-title{color:#fff;}
+.section-navy .eyebrow{color:var(--crimson-light);}
+.section-sub{max-width:640px;color:var(--muted);margin-top:14px;}
+.section-navy .section-sub{color:rgba(255,255,255,.7);}
+
+/* ============ TOPBAR WRAPPER ============ */
+.topbar-fixed{
+  position:fixed;top:0;left:0;right:0;z-index:1055;display:flex;flex-direction:column;max-width:100%;
+  transform:translateZ(0);-webkit-transform:translateZ(0);transition:transform .35s ease;
+  will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden;
+}
+@media(max-width:991.98px){.topbar-fixed.nav-hidden{transform:translateY(-100%) translateZ(0);}}
+@media(min-width:992px){
+  .site-header{max-height:120px;overflow:hidden;transition:max-height .4s ease,opacity .3s ease,padding .3s ease;}
+  .topbar-fixed.is-scrolled .site-header{max-height:0;opacity:0;}
+  .topbar-fixed.is-scrolled .header-inner{padding-top:0;padding-bottom:0;}
+}
+/* ============ HEADER ============ */
+.site-header{position:static;background:#fff;border-bottom:1px solid #E7F0EE;box-shadow:var(--shadow-sm);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;gap:16px;}
+.brand-block{display:flex;align-items:center;gap:14px;min-width:0;flex:1 1 auto;}
+.brand-logo{height:clamp(52px,4.8vw,74px);width:auto;max-width:100%;object-fit:contain;flex:0 0 auto;}
+.brand-wordmark{display:flex;flex-direction:column;line-height:1.15;}
+.brand-wordmark .l1{font-family:var(--font-d);font-weight:700;font-size:clamp(1rem,1.6vw,1.35rem);color:var(--navy);}
+.brand-wordmark .l2{font-family:var(--font-d);font-weight:800;font-size:clamp(1.1rem,1.9vw,1.55rem);color:var(--crimson);}
+.brand-wordmark .l3{font-family:var(--font-b);font-weight:600;font-size:.66rem;letter-spacing:.02em;color:var(--muted);margin-top:2px;}
+.header-social{display:flex;align-items:center;gap:10px;}
+.header-social a{
+  width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:var(--royal-soft);color:var(--royal);font-size:.85rem;transition:.25s;
+}
+.header-social a:hover{background:var(--royal);color:#fff;transform:translateY(-2px);}
+.header-cta{display:flex;align-items:center;flex-wrap:wrap;justify-content:flex-end;gap:12px;row-gap:10px;}
+.btn-icon-badge{
+  width:26px;height:26px;border-radius:50%;flex:0 0 auto;display:flex;align-items:center;justify-content:center;
+  font-size:.68rem;transition:.35s cubic-bezier(.2,.8,.2,1);
+}
+.btn-student-login{
+  display:inline-flex;align-items:center;gap:10px;white-space:nowrap;background:#fff;
+  border:1.5px solid rgba(11,31,77,.22);color:var(--navy);font-family:var(--font-d);font-weight:700;font-size:.78rem;
+  padding:8px 20px 8px 8px;border-radius:50px;transition:.35s cubic-bezier(.2,.8,.2,1);box-shadow:0 4px 14px rgba(11,31,77,.08);
+}
+.btn-student-login .btn-icon-badge{background:var(--royal-soft);color:var(--royal);}
+.btn-student-login:hover{border-color:var(--royal);background:var(--royal);color:#fff;transform:translateY(-2px);box-shadow:0 12px 26px rgba(27,68,176,.28);}
+.btn-student-login:hover .btn-icon-badge{background:rgba(255,255,255,.22);color:#fff;}
+.btn-admission{
+  position:relative;overflow:hidden;font-family:var(--font-d);font-weight:700;font-size:.85rem;color:#fff;
+  background:linear-gradient(120deg,var(--crimson) 0%,var(--crimson-deep) 100%);padding:9px 24px 9px 9px;
+  border-radius:50px;border:none;display:inline-flex;align-items:center;gap:11px;
+  box-shadow:0 10px 26px rgba(140,15,38,.4);animation:admissionPulse 2.4s ease-in-out infinite;white-space:nowrap;
+}
+.btn-admission .btn-icon-badge{background:rgba(255,255,255,.28);color:#fff;}
+.btn-admission::before{
+  content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 40%,rgba(255,255,255,.5) 50%,transparent 60%);
+  transform:translateX(-130%);transition:transform .7s;
+}
+.btn-admission:hover::before{transform:translateX(130%);}
+.btn-admission:hover{color:#fff;transform:translateY(-2px);}
+@keyframes admissionPulse{
+  0%,100%{box-shadow:0 10px 26px rgba(140,15,38,.4);}
+  50%{box-shadow:0 10px 32px rgba(140,15,38,.62),0 0 0 6px rgba(200,30,58,.14);}
+}
+@media (max-width:767.98px){.btn-student-login,.btn-admission,.header-social{display:none;}}
+
+/* ============ NAV ============ */
+.main-nav{position:static;background:var(--royal);width:100%;}
+.main-nav .navbar{padding:0;}
+.main-nav .container-xl{display:flex;align-items:center;justify-content:center;}
+.nav-desktop{display:none;}
+@media(min-width:992px){
+  .nav-desktop{display:flex;list-style:none;margin:0;padding:0;width:100%;justify-content:center;flex-wrap:nowrap;}
+  .nav-desktop>li{position:relative;flex:0 0 auto;}
+  .nav-desktop>li>a{
+    display:flex;align-items:center;gap:clamp(3px,.5vw,6px);white-space:nowrap;padding:15px clamp(7px,1.15vw,15px);
+    color:#fff;font-family:var(--font-d);font-weight:600;font-size:clamp(.7rem,.58rem + .35vw,.82rem);
+    letter-spacing:.03em;text-transform:uppercase;border-bottom:3px solid transparent;transition:.2s;
+  }
+  .nav-desktop>li>a i{font-size:.6rem;opacity:.7;transition:.2s;flex:0 0 auto;}
+  .nav-desktop>li:hover>a{background:rgba(255,255,255,.08);border-bottom-color:var(--crimson);color:#fff;}
+  .nav-desktop>li:hover>a i{transform:rotate(180deg);}
+  .drop-panel{
+    position:absolute;top:100%;left:0;min-width:255px;background:var(--royal);border-radius:0;box-shadow:var(--shadow-md);
+    opacity:0;visibility:hidden;transform:translateY(8px);transition:.2s;padding:8px;border-top:3px solid var(--crimson);
+    list-style:none;margin:0;z-index:20;max-height:70vh;overflow-y:auto;
+  }
+  .nav-desktop>li:hover .drop-panel{opacity:1;visibility:visible;transform:translateY(0);}
+  .drop-panel a{
+    display:flex;align-items:center;gap:10px;padding:11px 14px;color:#fff;font-weight:500;font-size:.78rem;
+    letter-spacing:.02em;text-transform:uppercase;border-radius:0;border-left:3px solid transparent;transition:.2s;
+  }
+  .drop-panel a:hover{background:var(--crimson-light);color:#fff;padding-left:20px;border-left-color:#fff;}
+  .drop-panel a i{color:rgba(255,255,255,.65);font-size:.55rem;}
+  .drop-panel a:hover i{color:#fff;}
+  .drop-panel li.has-submenu{position:relative;}
+  .drop-panel li.has-submenu>a .submenu-arrow{color:rgba(255,255,255,.65);font-size:.65rem;margin-left:auto;padding-left:8px;}
+  .drop-panel li.has-submenu>a:hover .submenu-arrow{color:#fff;}
+  .drop-panel.drop-panel--noscroll{max-height:none;overflow:visible;}
+  .drop-submenu{
+    position:absolute;top:0;left:100%;min-width:245px;background:var(--royal);box-shadow:var(--shadow-md);
+    opacity:0;visibility:hidden;transform:translateX(8px);transition:.2s;padding:8px;border-left:3px solid var(--crimson);
+    list-style:none;margin:0;z-index:21;
+  }
+  .drop-panel li.has-submenu:hover .drop-submenu{opacity:1;visibility:visible;transform:translateX(0);}
+  .drop-submenu a{
+    display:flex;align-items:center;gap:10px;padding:11px 14px;color:#fff;font-weight:500;font-size:.78rem;
+    letter-spacing:.02em;text-transform:uppercase;border-left:3px solid transparent;transition:.2s;white-space:nowrap;
+  }
+  .drop-submenu a:hover{background:var(--crimson-light);color:#fff;padding-left:20px;border-left-color:#fff;}
+  .drop-submenu a i{color:rgba(255,255,255,.65);font-size:.55rem;}
+  .drop-submenu a:hover i{color:#fff;}
+  @media(min-width:992px) and (max-width:1300px){
+    .drop-submenu{left:auto;right:100%;transform:translateX(-8px);}
+    .drop-panel li.has-submenu:hover .drop-submenu{transform:translateX(0);}
+  }
+}
+.nav-toggle-btn{
+  display:flex;align-items:center;gap:8px;background:none;border:none;color:#fff;font-family:var(--font-d);
+  font-weight:600;font-size:.82rem;padding:15px 4px;flex:0 0 auto;
+}
+.nav-toggle-btn .bars{width:26px;height:20px;position:relative;flex:0 0 auto;}
+.nav-toggle-btn .bars span{position:absolute;left:0;width:100%;height:2.5px;background:#fff;border-radius:3px;}
+.nav-toggle-btn .bars span:nth-child(1){top:0;}
+.nav-toggle-btn .bars span:nth-child(2){top:9px;}
+.nav-toggle-btn .bars span:nth-child(3){top:18px;}
+@media(min-width:992px){.nav-toggle-btn{display:none;}}
+.main-nav .container-xl{justify-content:space-between;}
+@media(min-width:992px){.main-nav .container-xl{justify-content:center;}}
+
+/* ---- Mobile Offcanvas Nav ---- */
+.acet-offcanvas{width:min(310px,88vw);background:var(--navy);}
+.acet-offcanvas .offcanvas-header{border-bottom:1px solid rgba(255,255,255,.1);padding:18px 20px;}
+.acet-offcanvas .offcanvas-title{color:#fff;font-family:var(--font-d);font-weight:700;font-size:1rem;}
+.acet-offcanvas .btn-close{filter:invert(1) grayscale(1) brightness(2);opacity:1;width:14px;height:14px;padding:10px;background-color:rgba(255,255,255,.08);border-radius:50%;}
+.acet-offcanvas .offcanvas-body{padding:10px 12px 30px;}
+.mobile-nav-list{list-style:none;margin:0;padding:0;}
+.mobile-nav-list>li{border-bottom:1px solid rgba(255,255,255,.08);}
+.mobile-nav-list>li>a,.mnav-toggle{
+  display:flex;align-items:center;justify-content:space-between;padding:14px 10px;color:#fff;font-family:var(--font-d);
+  font-weight:600;font-size:.9rem;width:100%;background:none;border:none;text-align:left;
+}
+.mobile-nav-list>li>a{justify-content:flex-start;gap:9px;}
+.mobile-nav-list>li>a i{font-size:.6rem;color:var(--crimson);}
+.mnav-toggle i{transition:.25s;color:var(--crimson);}
+.mnav-toggle[aria-expanded="true"] i{transform:rotate(180deg);}
+.mobile-sub{list-style:none;margin:0 0 6px;padding:0 0 0 14px;}
+.mobile-sub a{display:flex;align-items:center;gap:8px;padding:10px;color:rgba(255,255,255,.75);font-size:.83rem;border-left:2px solid rgba(255,255,255,.15);}
+.mobile-sub a i{font-size:.58rem;color:var(--crimson);}
+.mobile-sub a:hover{color:var(--crimson-light);border-left-color:var(--crimson);}
+.mobile-sub .mnav-toggle-sub{
+  display:flex;align-items:center;justify-content:space-between;width:100%;padding:10px;color:rgba(255,255,255,.75);
+  font-size:.83rem;font-weight:500;font-family:var(--font-b);background:none;border:none;border-left:2px solid rgba(255,255,255,.15);text-align:left;
+}
+.mobile-sub .mnav-toggle-sub i{font-size:.58rem;color:var(--crimson);transition:.25s;}
+.mobile-sub .mnav-toggle-sub[aria-expanded="true"]{color:var(--crimson-light);border-left-color:var(--crimson);}
+.mobile-sub .mnav-toggle-sub[aria-expanded="true"] i{transform:rotate(180deg);}
+.mobile-sub-nested{list-style:none;margin:2px 0 6px;padding:0 0 0 14px;}
+.mobile-sub-nested a{display:flex;align-items:center;gap:8px;padding:9px;color:rgba(255,255,255,.65);font-size:.78rem;border-left:2px solid rgba(255,255,255,.12);}
+.mobile-sub-nested a i{font-size:.52rem;color:var(--crimson);}
+.mobile-sub-nested a:hover{color:var(--crimson-light);border-left-color:var(--crimson);}
+.mobile-action-buttons{display:flex;flex-direction:column;gap:10px;margin:18px 4px 0;}
+.mobile-action-btn{
+  display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);color:#fff;font-family:var(--font-d);font-weight:700;font-size:.85rem;
+  padding:13px 18px;border-radius:12px;transition:.25s;
+}
+.mobile-action-btn i{color:var(--crimson);width:16px;text-align:center;transition:.25s;}
+.mobile-action-btn:hover,.mobile-action-btn:active{background:var(--crimson);color:#fff;border-color:var(--crimson);}
+.mobile-action-btn:hover i,.mobile-action-btn:active i{color:#fff;}
+.est-mobile{margin:18px 4px 0;padding:14px;background:rgba(255,255,255,.06);border-radius:12px;text-align:center;color:#fff;}
+.est-mobile strong{color:var(--crimson-light);font-size:1.3rem;display:block;font-family:var(--font-d);}
+.offcanvas-backdrop{z-index:1056;}
+.acet-offcanvas{z-index:1057;}
+@media(max-width:767.98px){
+  .header-inner{flex-wrap:wrap;}
+  .brand-block{width:100%;justify-content:center;}
+  .brand-logo{height:clamp(48px,14vw,64px);max-width:70%;}
+  .header-cta{width:100%;justify-content:center;}
+}
+
+/* ============ HERO CAROUSEL ============ */
+.hero-carousel{position:relative;width:100%;aspect-ratio:1900/600;min-height:190px;max-height:820px;}
+@media (max-width:575.98px){.hero-carousel{min-height:150px;}}
+.hero-carousel .carousel,.hero-carousel .carousel-inner,.hero-carousel .carousel-item{height:100%;width:100%;}
+.hero-slide{height:100%;width:100%;position:relative;overflow:hidden;display:flex;align-items:center;}
+.hero-slide-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+.hero-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,19,48,.72) 0%,rgba(7,19,48,.28) 55%,rgba(7,19,48,.05) 100%);}
+.hero-slide-content{position:relative;z-index:2;color:#fff;max-width:640px;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;background:rgba(200,30,58,.16);border:1px solid rgba(200,30,58,.42);
+  color:var(--crimson-light);padding:7px 16px;border-radius:50px;font-size:.76rem;font-weight:600;font-family:var(--font-d);
+  letter-spacing:.05em;text-transform:uppercase;margin-bottom:20px;
+}
+.hero-slide-content h1{font-size:clamp(2rem,4.4vw,3.3rem);font-weight:800;color:#fff;line-height:1.15;margin-bottom:18px;}
+.hero-slide-content h1 span{color:var(--crimson-light);}
+.hero-slide-content p{color:rgba(255,255,255,.84);font-size:1.03rem;max-width:520px;margin-bottom:26px;}
+.hero-btn-row{display:flex;flex-wrap:wrap;gap:14px;}
+.btn-hero-primary{
+  background:var(--brand-gradient);color:#fff;font-family:var(--font-d);font-weight:700;padding:14px 30px;
+  border-radius:50px;font-size:.9rem;box-shadow:0 10px 26px rgba(27,68,176,.4);display:inline-flex;align-items:center;gap:10px;
+}
+.btn-hero-ghost{
+  border:1.5px solid rgba(255,255,255,.5);color:#fff;font-family:var(--font-d);font-weight:700;padding:14px 28px;
+  border-radius:50px;font-size:.9rem;display:inline-flex;align-items:center;gap:10px;backdrop-filter:blur(4px);
+}
+.btn-hero-ghost:hover{background:rgba(255,255,255,.12);color:#fff;}
+.hero-carousel .carousel-indicators{margin-bottom:26px;gap:6px;}
+.hero-carousel .carousel-indicators [data-bs-target]{
+  width:18px;height:3px;border-radius:3px;background:rgba(255,255,255,.4);opacity:1;margin:0 3px;
+  box-sizing:content-box;padding:9px 0;background-clip:content-box;border:0;
+}
+.hero-carousel .carousel-indicators .active{background:var(--crimson);}
+.hero-carousel .carousel-control-prev,.hero-carousel .carousel-control-next{width:5%;opacity:0;transition:.2s;}
+.hero-carousel:hover .carousel-control-prev,.hero-carousel:hover .carousel-control-next{opacity:.85;}
+@media (max-width:991.98px),(hover:none){.hero-carousel .carousel-control-prev,.hero-carousel .carousel-control-next{opacity:.55;}}
+
+.hero-stat-strip{position:relative;margin-top:-56px;z-index:5;}
+.hero-stat-card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-md);padding:26px 10px;text-align:center;
+  border:1px solid transparent;transition:.4s cubic-bezier(.2,.8,.2,1);cursor:default;
+}
+.hero-stat-card:hover{transform:translateY(-9px);border-color:var(--royal-soft);box-shadow:0 22px 42px rgba(11,31,77,.2);}
+.hero-stat-card i{font-size:1.45rem;color:var(--royal);margin-bottom:10px;display:inline-block;transition:.4s cubic-bezier(.2,.8,.2,1);}
+.hero-stat-card:hover i{transform:scale(1.18) rotate(-8deg);color:var(--crimson-deep);}
+.hero-stat-card h3{font-size:1.6rem;font-weight:800;color:var(--navy);}
+.hero-stat-card span{font-size:.76rem;color:var(--muted);font-weight:600;letter-spacing:.02em;}
+
+/* ============ ABOUT ============ */
+.about-photo-wrap{position:relative;}
+.about-photo-main{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-md);}
+.about-photo-main img{width:100%;height:420px;object-fit:cover;}
+@media(max-width:991.98px){.about-photo-main img{height:320px;}}
+
+.about-affiliation-strip{
+  margin-top:64px;background:#fff;border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:30px 34px;
+}
+.affiliation-title{
+  display:block;font-family:var(--font-d);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:22px;padding-bottom:16px;border-bottom:1px solid #E7EEEC;
+}
+.affiliation-logos{display:flex;gap:36px;flex-wrap:wrap;align-items:center;}
+.affiliation-logo-item{display:flex;flex-direction:row;align-items:center;gap:14px;text-align:left;}
+.affiliation-logo-item img{border-radius:50%;width:54px;height:54px;flex:0 0 auto;}
+.affiliation-logo-item span{font-size:.84rem;color:var(--navy);font-weight:600;line-height:1.35;max-width:150px;}
+@media(max-width:575.98px){.affiliation-logos{gap:22px;}.affiliation-logo-item{width:100%;}}
+
+/* ============ VISION & MISSION — MANIFESTO PANEL ============ */
+.vm2-panel{
+  position:relative;background:linear-gradient(135deg,var(--navy) 0%,var(--royal-deep) 100%);
+  border-radius:28px;overflow:hidden;display:flex;box-shadow:0 30px 70px rgba(7,19,48,.35);
+}
+.vm2-panel::before{
+  content:'';position:absolute;top:-140px;right:-100px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,30,58,.28),transparent 70%);pointer-events:none;
+}
+.vm2-panel::after{
+  content:'';position:absolute;bottom:-140px;left:-100px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(27,68,176,.32),transparent 70%);pointer-events:none;
+}
+.vm2-col{flex:1;padding:56px 50px;position:relative;z-index:1;min-width:0;}
+.vm2-divider{width:1px;background:rgba(255,255,255,.14);margin:48px 0;flex:0 0 auto;}
+.vm2-watermark{position:absolute;top:18px;right:26px;font-size:6rem;color:rgba(255,255,255,.05);pointer-events:none;line-height:1;z-index:0;}
+.vm2-tag{position:relative;display:inline-flex;align-items:center;gap:10px;font-family:var(--font-d);font-weight:700;font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:var(--crimson-light);margin-bottom:30px;}
+.vm2-tag i{font-size:.85rem;}
+.vm2-goal{position:relative;display:flex;gap:18px;align-items:flex-start;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.vm2-goal:last-child{border-bottom:none;padding-bottom:0;}
+.vm2-goal:first-child{padding-top:0;}
+.vm2-goal-icon{
+  flex:0 0 auto;width:38px;height:38px;border-radius:11px;background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;
+  color:var(--crimson-light);font-size:.92rem;margin-top:2px;
+}
+.vm2-goal p{color:rgba(255,255,255,.82);font-size:.95rem;line-height:1.65;margin:0;text-align:left;}
+.vm2-quote-mark{position:relative;font-family:Georgia,serif;font-size:4.2rem;color:var(--crimson-light);opacity:.55;line-height:.4;display:block;margin-bottom:16px;}
+.vm2-quote{position:relative;color:rgba(255,255,255,.88);font-size:1.05rem;line-height:1.85;text-align:left;font-style:italic;}
+.vm2-signoff{position:relative;display:flex;align-items:center;gap:12px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.1);}
+.vm2-signoff-mark{width:34px;height:34px;border-radius:50%;background:var(--brand-gradient);flex:0 0 auto;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;}
+.vm2-signoff span{font-family:var(--font-d);font-weight:600;font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.02em;}
+@media(max-width:991.98px){
+  .vm2-panel{flex-direction:column;}
+  .vm2-divider{width:auto;height:1px;margin:0 50px;}
+  .vm2-col{padding:44px 34px;}
+}
+@media(max-width:575.98px){
+  .vm2-col{padding:38px 24px;}
+  .vm2-watermark{font-size:4.2rem;}
+  .vm2-quote-mark{font-size:3.4rem;}
+}
+
+/* ============ COURSES OFFERED — TABBED CATALOG ============ */
+.courses-section{position:relative;overflow:hidden;}
+.courses-section::before{
+  content:'';position:absolute;top:-120px;right:-140px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(27,68,176,.07),transparent 70%);pointer-events:none;
+}
+.courses-section::after{
+  content:'';position:absolute;bottom:-140px;left:-140px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,30,58,.07),transparent 70%);pointer-events:none;
+}
+.courses-section .container-xl{position:relative;z-index:1;}
+.course-tabs{display:flex;justify-content:center;gap:10px;margin:36px 0 46px;flex-wrap:wrap;}
+.course-tab{
+  font-family:var(--font-d);font-weight:700;font-size:.84rem;padding:12px 24px;border-radius:50px;
+  border:1.5px solid rgba(11,31,77,.14);background:#fff;color:var(--navy);cursor:pointer;transition:.3s;
+  display:inline-flex;align-items:center;gap:10px;
+}
+.course-tab span{font-size:.66rem;font-weight:700;background:var(--royal-soft);color:var(--royal-deep);padding:3px 10px;border-radius:20px;}
+.course-tab:hover:not(.active){border-color:var(--royal);color:var(--royal);}
+.course-tab.active{background:var(--brand-gradient);color:#fff;border-color:transparent;box-shadow:0 12px 26px rgba(27,68,176,.32);}
+.course-tab.active span{background:rgba(255,255,255,.22);color:#fff;}
+.course-panel{display:none;}
+.course-panel.active{display:block;}
+.course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+@media(max-width:991.98px){.course-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:575.98px){.course-grid{grid-template-columns:1fr;}}
+.course-card{
+  --a1:var(--royal);--a2:var(--royal-deep);
+  position:relative;background:#fff;border-radius:20px;padding:32px 26px 28px;box-shadow:var(--shadow-sm);
+  overflow:hidden;transition:.4s cubic-bezier(.2,.8,.2,1);border:1px solid transparent;height:100%;
+}
+.course-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);border-color:var(--royal-soft);}
+.course-card-num{
+  position:absolute;top:-14px;right:2px;font-family:var(--font-d);font-weight:800;font-size:5.4rem;
+  color:var(--a1);opacity:.06;line-height:1;pointer-events:none;
+}
+.course-card-icon{
+  position:relative;z-index:1;width:58px;height:58px;border-radius:16px;
+  background:linear-gradient(135deg,var(--a1),var(--a2));display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.3rem;margin-bottom:20px;box-shadow:0 12px 24px rgba(7,19,48,.18);
+}
+.course-card-badges{position:relative;z-index:1;display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+.course-card-badge{font-size:.64rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:var(--royal-soft);color:var(--royal-deep);white-space:nowrap;}
+.course-card-badge.alt{background:#FFF1EC;color:var(--crimson-deep);}
+.course-card h3{position:relative;z-index:1;font-size:1.14rem;margin-bottom:10px;line-height:1.32;}
+.course-card p{position:relative;z-index:1;font-size:.85rem;margin-bottom:18px;}
+.cp-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-d);font-weight:700;font-size:.78rem;color:var(--royal);text-transform:uppercase;letter-spacing:.04em;transition:.25s;}
+.cp-link i{font-size:.68rem;transition:.25s;}
+.cp-link:hover{color:var(--crimson-deep);gap:12px;}
+.course-card .cp-link{position:relative;z-index:1;}
+
+/* ============ DEPARTMENTS — MOSAIC ============ */
+.dept-card-v2{
+  --a1:var(--royal);--a2:var(--royal-deep);
+  background:#fff;border-radius:22px;overflow:hidden;box-shadow:var(--shadow-sm);height:100%;
+  transition:.4s cubic-bezier(.2,.8,.2,1);position:relative;text-decoration:none;display:block;
+}
+.dept-card-v2:hover{transform:translateY(-8px);box-shadow:var(--shadow-md);}
+.dept-card-v2-head{height:92px;background:linear-gradient(120deg,var(--a1),var(--a2));position:relative;overflow:hidden;}
+.dept-card-v2-head::after{content:'';position:absolute;inset:0;background:linear-gradient(160deg,rgba(255,255,255,.18),transparent 60%);}
+.dept-card-v2-tag{
+  position:absolute;top:14px;right:16px;z-index:1;font-family:var(--font-d);font-weight:700;font-size:.6rem;
+  letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.75);background:rgba(255,255,255,.14);
+  padding:4px 10px;border-radius:20px;
+}
+.dept-card-v2-icon{
+  width:62px;height:62px;border-radius:17px;background:#fff;box-shadow:0 12px 24px rgba(7,19,48,.22);
+  display:flex;align-items:center;justify-content:center;font-size:1.4rem;color:var(--a1);
+  position:absolute;left:24px;bottom:-28px;z-index:2;border:3px solid #fff;transition:.4s cubic-bezier(.2,.8,.2,1);
+}
+.dept-card-v2:hover .dept-card-v2-icon{transform:rotate(-8deg) scale(1.08);}
+.dept-card-v2-body{padding:42px 24px 24px;}
+.dept-card-v2-body h4{font-size:1.06rem;margin-bottom:8px;letter-spacing:.01em;}
+.dept-card-v2-body p{font-size:.83rem;margin-bottom:16px;min-height:42px;}
+.dept-card-v2-link{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-d);font-weight:700;font-size:.72rem;color:var(--a1);text-transform:uppercase;letter-spacing:.04em;transition:.25s;}
+.dept-card-v2-link i{font-size:.62rem;transition:.25s;}
+.dept-card-v2:hover .dept-card-v2-link{gap:11px;color:var(--crimson-deep);}
+
+
+/* ============ CAMPUS LIFE — EXPANDO STRIP ============ */
+.campus-life-section{
+  position:relative;overflow:hidden;
+  background-image:linear-gradient(120.16deg, rgba(255,255,255,.9) 6.19%, rgba(255,255,255,.72) 100.01%),
+    url('https://angelcollege.edu.in/wp-content/uploads/2017/10/Mess-Inner-View-1024x683.jpg');
+  background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:scroll;
+}
+.campus-life-section .section-title{color:var(--navy);}
+.campus-life-section .eyebrow{color:var(--crimson);}
+.campus-life-section .eyebrow::before{background:var(--crimson);}
+.campus-life-section p,.campus-life-section .section-sub{color:var(--muted)!important;}
+.campus-life-section::before{
+  content:'';position:absolute;top:-160px;left:-120px;width:440px;height:440px;border-radius:50%;
+  background:radial-gradient(circle,rgba(27,68,176,.14),transparent 70%);pointer-events:none;
+}
+.campus-life-section::after{
+  content:'';position:absolute;bottom:-160px;right:-120px;width:440px;height:440px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,30,58,.12),transparent 70%);pointer-events:none;
+}
+.campus-life-section .container-xl{position:relative;z-index:1;}
+.campus-expando{display:flex;gap:8px;height:460px;}
+.campus-expando-panel{
+  position:relative;flex:1;min-width:0;border-radius:20px;overflow:hidden;text-decoration:none;
+  background-image:linear-gradient(0deg,rgba(7,19,48,.9) 0%,rgba(7,19,48,.18) 46%,rgba(7,19,48,.5) 100%),var(--img);
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  box-shadow:0 14px 30px rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.08);border-top:3px solid var(--a1);
+  transition:flex .55s cubic-bezier(.2,.8,.2,1);
+}
+.campus-expando-panel::before{
+  content:'';position:absolute;inset:0;background:linear-gradient(160deg,var(--a1),var(--a2));opacity:.28;pointer-events:none;
+}
+.campus-expando-panel:hover,.campus-expando-panel:focus{flex:3.2;}
+.campus-expando-icon{
+  position:absolute;top:26px;left:26px;z-index:1;width:52px;height:52px;border-radius:14px;
+  background:rgba(255,255,255,.14);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.26);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.2rem;
+}
+.campus-expando-content{position:absolute;left:26px;right:22px;bottom:26px;z-index:1;}
+.campus-expando-title{
+  display:block;font-family:var(--font-d);font-weight:700;font-size:1.08rem;color:#fff;white-space:nowrap;
+  writing-mode:vertical-rl;transform:rotate(180deg);transition:.3s ease;
+}
+.campus-expando-panel:hover .campus-expando-title,.campus-expando-panel:focus .campus-expando-title{
+  writing-mode:horizontal-tb;transform:none;white-space:normal;
+}
+.campus-expando-desc{
+  font-size:.84rem;color:rgba(255,255,255,.85);line-height:1.55;margin-top:8px;max-width:260px;
+  opacity:0;max-height:0;overflow:hidden;transition:opacity .3s ease .05s;
+}
+.campus-expando-panel:hover .campus-expando-desc,.campus-expando-panel:focus .campus-expando-desc{opacity:1;max-height:160px;}
+.campus-expando-num{
+  position:absolute;top:24px;right:24px;z-index:1;font-family:var(--font-d);font-weight:800;font-size:.7rem;
+  color:rgba(255,255,255,.55);letter-spacing:.05em;
+}
+@media (max-width:767.98px){
+  .campus-expando{flex-direction:column;height:auto;gap:14px;}
+  .campus-expando-panel{flex:none!important;padding:24px;}
+  .campus-expando-icon{position:static;margin-bottom:14px;}
+  .campus-expando-content{position:static;}
+  .campus-expando-title{writing-mode:horizontal-tb!important;transform:none!important;white-space:normal!important;font-size:1.05rem;}
+  .campus-expando-desc{opacity:1!important;max-height:none!important;max-width:none;}
+  .campus-expando-num{top:24px;right:24px;}
+}
+.activity-chip{
+  display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(11,31,77,.14);
+  color:var(--navy);font-size:.78rem;font-weight:600;padding:9px 16px;border-radius:24px;transition:.25s;
+  box-shadow:var(--shadow-sm);
+}
+.activity-chip:hover{background:var(--crimson);border-color:var(--crimson);color:#fff;}
+.activity-chip i{color:var(--crimson);font-size:.7rem;}
+.activity-chip:hover i{color:#fff;}
+
+/* ============ PLACEMENT — PREMIUM REDESIGN ============ */
+.placement-section-v2{position:relative;overflow:hidden;}
+.placement-section-v2::before{
+  content:'';position:absolute;top:-160px;right:-140px;width:460px;height:460px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,30,58,.18),transparent 70%);pointer-events:none;
+}
+.placement-section-v2::after{
+  content:'';position:absolute;bottom:-160px;left:-140px;width:460px;height:460px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.06),transparent 70%);pointer-events:none;
+}
+.placement-section-v2 .container-xl{position:relative;z-index:1;}
+
+.placement-stat-row{
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:20px;
+  padding:32px 20px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  max-width:820px;margin:0 auto;box-shadow:0 20px 50px rgba(0,0,0,.22);
+}
+.placement-stat{flex:1;text-align:center;padding:0 20px;}
+.placement-stat .num{
+  display:block;font-family:var(--font-d);font-weight:800;font-size:2.15rem;line-height:1;
+  background:linear-gradient(120deg,#fff,var(--crimson-light));-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.placement-stat .label{display:block;margin-top:9px;font-size:.72rem;color:rgba(255,255,255,.6);line-height:1.4;font-weight:600;letter-spacing:.02em;}
+.placement-stat-divider{width:1px;align-self:stretch;background:rgba(255,255,255,.14);}
+@media (max-width:575.98px){
+  .placement-stat-row{flex-direction:column;gap:22px;padding:28px 24px;}
+  .placement-stat-divider{width:60%;height:1px;align-self:center;}
+}
+
+.placement-panel-title{color:#fff;font-family:var(--font-d);font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:10px;margin-bottom:20px;}
+.placement-panel-title i{color:var(--crimson-light);}
+.recruiter-cloud{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px;}
+.recruiter-cloud span{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.85);
+  font-family:var(--font-d);font-weight:600;font-size:.78rem;padding:8px 16px;border-radius:20px;transition:.3s;display:inline-block;
+}
+.recruiter-cloud span:hover{background:var(--crimson);border-color:var(--crimson);color:#fff;transform:translateY(-2px);}
+
+.placement-success-badge{
+  display:flex;align-items:center;gap:14px;background:rgba(200,30,58,.12);border:1px solid rgba(200,30,58,.3);
+  border-radius:14px;padding:16px 18px;
+}
+.placement-success-badge i{color:var(--crimson-light);font-size:1.1rem;flex:0 0 auto;}
+.placement-success-badge p{margin:0;font-size:.82rem;color:rgba(255,255,255,.85);line-height:1.5;}
+.placement-success-badge strong{color:#fff;}
+
+.placement-timeline{position:relative;padding-left:6px;}
+.placement-timeline::before{content:'';position:absolute;left:23px;top:8px;bottom:8px;width:2px;background:linear-gradient(180deg,var(--crimson),rgba(255,255,255,.1));}
+.pt-item{position:relative;display:flex;gap:22px;padding-bottom:34px;}
+.pt-item:last-child{padding-bottom:0;}
+.pt-node{
+  flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));
+  color:#fff;font-family:var(--font-d);font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 8px 20px rgba(200,30,58,.4);position:relative;z-index:1;border:3px solid var(--navy);
+}
+.pt-body{padding-top:6px;}
+.pt-body h5{color:#fff;font-family:var(--font-d);font-weight:700;font-size:1rem;margin-bottom:8px;}
+.pt-body p{color:rgba(255,255,255,.68);font-size:.86rem;line-height:1.7;margin:0;}
+
+/* ============ FOOTER ============ */
+
+/* ============ ADMISSION FLYER POPUP ============ */
+.admission-popup-overlay{
+  position:fixed;inset:0;z-index:2000;background:rgba(7,19,48,.72);display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;transition:.35s;padding:20px;backdrop-filter:blur(3px);
+}
+.admission-popup-overlay.show{opacity:1;visibility:visible;}
+.admission-popup-card{
+  position:relative;background:#fff;border-radius:20px;max-width:420px;width:100%;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.4);
+  transform:scale(.9);transition:.35s;text-align:center;
+}
+.admission-popup-overlay.show .admission-popup-card{transform:scale(1);}
+.admission-popup-flyer-img{width:100%;height:auto;max-height:340px;object-fit:cover;display:block;}
+.admission-popup-card .pop-head{background:var(--brand-gradient);padding:34px 26px 46px;color:#fff;}
+.admission-popup-card .pop-head i{font-size:2rem;color:var(--crimson-light);margin-bottom:12px;}
+.admission-popup-card .pop-head h3{color:#fff;font-size:1.35rem;}
+.admission-popup-card .pop-body{padding:26px;margin-top:-26px;}
+.admission-popup-card .pop-body .inner{background:#fff;border-radius:16px;box-shadow:var(--shadow-md);padding:22px;}
+.admission-popup-card .pop-body p{margin-bottom:18px;font-size:.9rem;}
+.admission-popup-close{
+  position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(7,19,48,.55);
+  color:#fff;border:none;display:flex;align-items:center;justify-content:center;z-index:3;cursor:pointer;
+  backdrop-filter:blur(3px);transition:.25s;
+}
+.admission-popup-close:hover{background:var(--crimson);transform:rotate(90deg);}
+
+/* ============ BACK TO TOP ============ */
+.back-to-top{
+  position:fixed;bottom:26px;right:26px;width:46px;height:46px;border-radius:50%;background:var(--brand-gradient);
+  color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);z-index:900;
+  opacity:0;visibility:hidden;transform:translateY(14px);transition:.3s;border:none;
+}
+.back-to-top.show{opacity:1;visibility:visible;transform:translateY(0);}
+.back-to-top:hover{background:linear-gradient(120deg,var(--crimson),var(--crimson-deep));}
+
+.announce-panel{
+  background:var(--navy);border-radius:var(--radius);color:#fff;
+  overflow:hidden;box-shadow:var(--shadow-md);flex:1;display:flex;flex-direction:column;height:460px;
+}
+.announce-panel-head{
+  padding:22px 26px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.announce-panel-head h4{color:#fff;font-size:1.05rem;font-weight:700;display:flex;align-items:center;gap:10px;}
+.announce-panel-head span{
+  font-size:.68rem;background:rgba(200,30,58,.2);color:var(--crimson-light);
+  padding:5px 10px;border-radius:20px;font-weight:700;letter-spacing:.04em;
+}
+.announce-marquee-mask{height:398px;overflow:hidden;position:relative;padding:0 10px;}
+.announce-marquee-mask::before,.announce-marquee-mask::after{
+  content:'';position:absolute;left:0;right:0;height:34px;z-index:2;pointer-events:none;
+}
+.announce-marquee-mask::before{top:0;background:linear-gradient(180deg,var(--navy),transparent);}
+.announce-marquee-mask::after{bottom:0;background:linear-gradient(0deg,var(--navy),transparent);}
+.announce-track{animation:marqueeY 22s linear infinite;}
+.announce-marquee-mask:hover .announce-track{animation-play-state:paused;}
+@keyframes marqueeY{0%{transform:translateY(0);}100%{transform:translateY(-50%);}}
+.announce-item{
+  display:flex;gap:16px;padding:16px 16px;margin:0 10px 12px;
+  background:rgba(255,255,255,.05);border-radius:12px;border-left:3px solid var(--crimson);
+}
+.announce-icon-block{
+  flex:0 0 auto;width:52px;height:52px;border-radius:14px;
+  background:linear-gradient(150deg,rgba(200,30,58,.24),rgba(27,68,176,.18));
+  border:1px solid rgba(200,30,58,.32);
+  display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:var(--crimson-light);
+}
+.announce-item .body{min-width:0;}
+.announce-item .body .announce-date-text{
+  display:inline-flex;align-items:center;gap:5px;font-size:.66rem;font-weight:700;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--crimson-light);background:rgba(255,255,255,.08);
+  padding:3px 10px;border-radius:20px;margin-bottom:8px;text-decoration:none;transition:.25s;
+  border:1px solid rgba(200,30,58,.24);
+}
+.announce-item .body .announce-date-text:hover{background:var(--crimson);color:#fff;border-color:transparent;}
+.announce-item .body h5{color:#fff;font-size:.88rem;font-weight:600;margin-bottom:0;font-family:var(--font-b);line-height:1.4;}
+
+/* ============ CAMPUS VIDEO (THEATRE MODE) ============ */
+.video-frame{
+  position:relative;border-radius:26px;overflow:hidden;aspect-ratio:16/9;cursor:pointer;
+  box-shadow:0 40px 80px rgba(7,19,48,.28);border:3px solid transparent;
+  background-image:linear-gradient(#fff,#fff),linear-gradient(135deg,var(--crimson) 0%,var(--royal) 55%,var(--navy) 100%);
+  background-origin:border-box;background-clip:padding-box,border-box;
+  transition:.5s cubic-bezier(.2,.8,.2,1);
+}
+.video-frame:hover{transform:translateY(-7px);box-shadow:0 52px 100px rgba(7,19,48,.4);}
+.video-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:.6s cubic-bezier(.2,.8,.2,1);}
+.video-frame:hover img{transform:scale(1.06);}
+.video-frame::after{
+  content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(7,19,48,.1) 0%,rgba(7,19,48,.15) 55%,rgba(7,19,48,.62) 100%);
+}
+.video-corner{position:absolute;width:36px;height:36px;border:3px solid var(--crimson);z-index:3;pointer-events:none;transition:.4s;}
+.video-corner.tl{top:18px;left:18px;border-right:none;border-bottom:none;border-radius:8px 0 0 0;}
+.video-corner.tr{top:18px;right:18px;border-left:none;border-bottom:none;border-radius:0 8px 0 0;}
+.video-corner.bl{bottom:18px;left:18px;border-right:none;border-top:none;border-radius:0 0 0 8px;}
+.video-corner.br{bottom:18px;right:18px;border-left:none;border-top:none;border-radius:0 0 8px 0;}
+.video-frame:hover .video-corner{width:44px;height:44px;}
+.video-play-btn{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:4;
+  width:96px;height:96px;border-radius:50%;
+  background:linear-gradient(135deg,var(--crimson) 0%,var(--crimson-deep) 100%);
+  display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.7rem;
+  box-shadow:0 20px 50px rgba(140,15,38,.5);transition:.4s cubic-bezier(.2,.8,.2,1);
+}
+.video-play-btn i{margin-left:5px;}
+.video-play-btn::before{
+  content:'';position:absolute;inset:-14px;border-radius:50%;border:2px solid rgba(200,30,58,.55);
+  animation:videoPulse 2.4s ease-out infinite;
+}
+.video-play-btn::after{
+  content:'';position:absolute;inset:-14px;border-radius:50%;border:2px solid rgba(200,30,58,.4);
+  animation:videoPulse 2.4s ease-out .4s infinite;
+}
+.video-frame:hover .video-play-btn{transform:translate(-50%,-50%) scale(1.12);box-shadow:0 26px 60px rgba(140,15,38,.65);}
+@keyframes videoPulse{0%{transform:scale(1);opacity:1;}100%{transform:scale(1.5);opacity:0;}}
+.video-caption{position:absolute;left:0;right:0;bottom:0;z-index:3;padding:30px 34px;}
+.video-caption span{display:block;font-family:var(--font-d);font-weight:700;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--crimson-light);margin-bottom:8px;}
+.video-caption h3{color:#fff;font-family:var(--font-d);font-weight:700;font-size:1.35rem;margin:0;}
+.theatre-overlay{
+  position:fixed;inset:0;z-index:9999;background:rgba(5,9,18,.96);
+  display:flex;align-items:center;justify-content:center;padding:60px 20px;
+  opacity:0;visibility:hidden;transition:opacity .4s ease,visibility .4s ease;
+}
+.theatre-overlay.active{opacity:1;visibility:visible;}
+.theatre-inner{
+  position:relative;width:100%;max-width:1100px;aspect-ratio:16/9;
+  border-radius:16px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.6);
+  transform:scale(.92);transition:transform .45s cubic-bezier(.2,.8,.2,1);
+  border:1px solid rgba(200,30,58,.28);background:#000;
+}
+.theatre-overlay.active .theatre-inner{transform:scale(1);}
+.theatre-inner iframe{width:100%;height:100%;display:block;border:0;}
+.theatre-close{
+  position:absolute;top:-54px;right:0;width:42px;height:42px;border-radius:50%;
+  background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.22);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-size:1rem;cursor:pointer;transition:.3s;
+}
+.theatre-close:hover{background:var(--crimson);border-color:var(--crimson);color:#fff;transform:rotate(90deg);}
+@media (max-width:575.98px){
+  .video-play-btn{width:70px;height:70px;font-size:1.3rem;}
+  .video-corner{width:24px;height:24px;}
+  .video-caption{padding:20px 22px;}
+  .video-caption h3{font-size:1.05rem;}
+  .theatre-close{top:-46px;width:36px;height:36px;}
+}
+
+/* ============ VOICES — SIMPLE TESTIMONIAL SWIPER ============ */
+.alumni-section{position:relative;overflow:hidden;}
+.alumni-section::before{
+  content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);
+  width:600px;height:300px;border-radius:50%;
+  background:radial-gradient(ellipse,rgba(200,30,58,.1),transparent 70%);pointer-events:none;
+}
+.voices-swiper{max-width:720px;margin:0 auto;padding:10px 0 50px;position:relative;}
+.voice-card{text-align:center;padding:12px 18px 0;}
+.voice-quote-icon{font-size:1.6rem;color:var(--crimson);margin-bottom:22px;display:inline-block;}
+.voice-card p{
+  font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:1.14rem;line-height:1.85;
+  color:var(--ink);margin-bottom:26px;
+}
+.voice-card h5{font-family:var(--font-d);font-weight:700;font-size:1rem;color:var(--navy);margin-bottom:3px;}
+.voice-card span{font-size:.8rem;color:var(--muted);font-weight:600;}
+.voices-swiper .swiper-pagination{position:relative;margin-top:12px;}
+.voices-swiper .swiper-pagination-bullet{background:var(--navy);opacity:.25;}
+.voices-swiper .swiper-pagination-bullet-active{background:var(--crimson);opacity:1;width:22px;border-radius:4px;}
+
+/* ============ ALUMNI TALKS — 3-CARD SWIPER ============ */
+.alumni-talks-section{position:relative;overflow:hidden;}
+.alumni-talks-section::before{
+  content:'';position:absolute;top:-140px;right:-120px;width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,rgba(27,68,176,.08),transparent 70%);pointer-events:none;
+}
+.alumni-talks-swiper{padding:8px 4px 54px;position:relative;}
+.atalk-card{
+  background:#fff;border-radius:20px;padding:30px 26px;height:100%;box-shadow:var(--shadow-sm);
+  border:1px solid rgba(11,31,77,.07);transition:.35s cubic-bezier(.2,.8,.2,1);
+}
+.atalk-card:hover{box-shadow:var(--shadow-md);transform:translateY(-6px);border-color:var(--royal-soft);}
+.atalk-top{display:flex;align-items:center;gap:14px;margin-bottom:20px;}
+.atalk-avatar{
+  width:58px;height:58px;border-radius:50%;overflow:hidden;flex:0 0 auto;
+  border:2.5px solid var(--royal-soft);box-shadow:var(--shadow-sm);
+}
+.atalk-avatar img{width:100%;height:100%;object-fit:cover;display:block;}
+.atalk-name{font-family:var(--font-d);font-weight:700;font-size:.98rem;color:var(--navy);line-height:1.3;}
+.atalk-meta{font-size:.74rem;color:var(--muted);font-weight:600;margin-top:2px;}
+.atalk-dept-pill{
+  display:inline-block;margin-top:6px;font-size:.6rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  padding:3px 10px;border-radius:20px;background:var(--royal-soft);color:var(--royal-deep);
+}
+.atalk-quote-icon{color:var(--crimson);font-size:1.05rem;opacity:.55;margin-bottom:10px;display:block;}
+.atalk-message{font-size:.88rem;line-height:1.75;color:var(--ink);font-style:italic;}
+.alumni-talks-swiper .swiper-pagination{position:relative;margin-top:16px;}
+.alumni-talks-swiper .swiper-pagination-bullet{background:var(--navy);opacity:.25;}
+.alumni-talks-swiper .swiper-pagination-bullet-active{background:var(--crimson);opacity:1;width:22px;border-radius:4px;}
+.atalk-nav{
+  position:absolute;top:calc(50% - 27px);transform:translateY(-50%);z-index:8;
+  width:46px;height:46px;border-radius:50%;border:1.5px solid rgba(27,68,176,.22);
+  background:#fff;color:var(--navy);display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;cursor:pointer;box-shadow:0 10px 24px rgba(7,19,48,.16);transition:.3s;
+}
+.atalk-nav:hover{background:var(--brand-gradient);color:#fff;border-color:transparent;}
+.atalk-nav.prev{left:-8px;}
+.atalk-nav.next{right:-8px;}
+@media (max-width:991.98px){.atalk-nav{display:none;}}
+
+/* ============ FAQ ACCORDION — MINIMAL LIST ============ */
+.faq-section{position:relative;padding:96px 0;overflow:hidden;}
+.faq-section::before{
+  content:'';position:absolute;top:-120px;right:-120px;width:360px;height:360px;border-radius:50%;
+  background:radial-gradient(circle,rgba(27,68,176,.08),transparent 70%);pointer-events:none;
+}
+.faq-section::after{
+  content:'';position:absolute;bottom:-140px;left:-140px;width:380px;height:380px;border-radius:50%;
+  background:radial-gradient(circle,rgba(200,30,58,.09),transparent 70%);pointer-events:none;
+}
+.faq-wrap{position:relative;z-index:2;max-width:820px;margin:0 auto;}
+.faq-item{border-bottom:1px solid rgba(11,31,77,.12);transition:.3s;}
+.faq-item:first-child{border-top:1px solid rgba(11,31,77,.12);}
+.faq-question{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;
+  background:none;border:none;cursor:pointer;text-align:left;padding:25px 2px;font-family:var(--font-d);
+}
+.faq-q-text{font-size:1.04rem;font-weight:700;color:var(--navy);line-height:1.45;transition:color .3s;}
+.faq-item.active .faq-q-text,.faq-item:hover .faq-q-text{color:var(--crimson);}
+.faq-toggle-icon{flex-shrink:0;width:26px;height:26px;position:relative;}
+.faq-toggle-icon::before,.faq-toggle-icon::after{
+  content:'';position:absolute;top:50%;left:50%;background:var(--navy);border-radius:2px;
+  transform:translate(-50%,-50%);transition:transform .4s cubic-bezier(.4,0,.2,1),background .3s;
+}
+.faq-toggle-icon::before{width:16px;height:2px;}
+.faq-toggle-icon::after{width:2px;height:16px;}
+.faq-item.active .faq-toggle-icon::before,.faq-item.active .faq-toggle-icon::after{background:var(--crimson);}
+.faq-item.active .faq-toggle-icon::after{transform:translate(-50%,-50%) rotate(90deg) scaleY(0);}
+.faq-answer-wrap{max-height:0;overflow:hidden;transition:max-height .45s cubic-bezier(.4,0,.2,1);}
+.faq-answer-inner{padding:0 2px 26px;}
+.faq-answer-inner p{font-size:.92rem;line-height:1.75;color:var(--muted);max-width:640px;}
+.faq-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.faq-tag{
+  font-family:var(--font-d);font-size:.66rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;
+  padding:5px 12px;border-radius:20px;background:rgba(200,30,58,.12);color:var(--crimson-deep);
+  border:1px solid rgba(140,15,38,.22);
+}
+.faq-cta{
+  margin-top:36px;text-align:center;padding:28px;border-radius:18px;
+  background:var(--brand-gradient);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
+  gap:18px;box-shadow:0 16px 40px rgba(27,68,176,.22);
+}
+.faq-cta-text{text-align:left;}
+.faq-cta-text h4{font-family:var(--font-d);color:#fff;font-size:1.05rem;font-weight:800;margin-bottom:4px;}
+.faq-cta-text p{color:rgba(255,255,255,.82);font-size:.82rem;margin:0;}
+.faq-cta-btn{
+  flex-shrink:0;background:#fff;color:var(--royal)!important;font-family:var(--font-d);font-size:.8rem;
+  font-weight:700;letter-spacing:.03em;text-transform:uppercase;padding:13px 28px;border-radius:8px;
+  display:inline-flex;align-items:center;gap:8px;transition:all .3s;text-decoration:none;
+}
+.faq-cta-btn:hover{background:var(--crimson);color:#fff!important;transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.2);}
+@media (max-width:575.98px){
+  .faq-section{padding:64px 0;}
+  .faq-question{padding:20px 2px;gap:14px;}
+  .faq-q-text{font-size:.94rem;}
+  .faq-cta{flex-direction:column;text-align:center;}
+  .faq-cta-text{text-align:center;}
+}
+
+
+/* ============ QUICK LINKS BAR ============ */
+.quick-links-bar{
+  background:linear-gradient(135deg,#fff 0%,var(--bg) 100%);
+  border-top:1px solid rgba(27,68,176,.08);border-bottom:1px solid rgba(27,68,176,.08);padding:28px 0;
+}
+.quick-links-inner{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;}
+.quick-link-item{
+  display:flex;align-items:center;gap:8px;padding:10px 20px;background:#fff;
+  border:1.5px solid rgba(27,68,176,.15);border-radius:8px;
+  font-family:var(--font-d);font-size:.72rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--ink);text-decoration:none;transition:.3s;box-shadow:0 2px 8px rgba(27,68,176,.05);
+}
+.quick-link-item i{font-size:.9rem;color:var(--royal);}
+.quick-link-item:hover i{color:var(--crimson-deep);}
+.quick-link-item:hover{border-color:var(--crimson-deep);color:var(--crimson-deep);transform:translateY(-2px);box-shadow:0 6px 18px rgba(140,15,38,.18);}
+.quick-link-divider{width:1px;height:30px;background:rgba(27,68,176,.15);display:block;}
+.btn-apply-here{
+  display:flex;align-items:center;gap:8px;padding:12px 28px;
+  background:var(--brand-gradient);color:#fff!important;border:none;border-radius:8px;
+  font-family:var(--font-d);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  text-decoration:none;cursor:pointer;transition:.3s;box-shadow:0 6px 20px rgba(27,68,176,.3);animation:apply-pulse 2s ease-in-out infinite;
+}
+@keyframes apply-pulse{
+  0%,100%{box-shadow:0 6px 20px rgba(27,68,176,.3);}
+  50%{box-shadow:0 6px 28px rgba(27,68,176,.55),0 0 0 4px rgba(27,68,176,.1);}
+}
+.btn-apply-here:hover{background:var(--crimson);transform:translateY(-3px);box-shadow:0 10px 30px rgba(200,30,58,.5);color:#fff!important;}
+
+/* ============ FOOTER — ELEGANT GRAND REDESIGN ============ */
+.site-footer{
+  position:relative;overflow:hidden;color:rgba(255,255,255,.7);
+  background:var(--navy-deep);
+}
+.site-footer::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;z-index:2;
+  background:linear-gradient(90deg,var(--royal) 0%,var(--crimson) 50%,var(--navy) 100%);
+}
+.site-footer::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle at 90% 0%,rgba(200,30,58,.16),transparent 45%),
+    radial-gradient(circle at 5% 100%,rgba(27,68,176,.14),transparent 45%);
+}
+.footer-watermark{
+  position:absolute;top:-.14em;right:-.02em;font-family:var(--font-d);font-weight:800;font-size:13rem;
+  line-height:1;color:rgba(255,255,255,.035);letter-spacing:-.02em;pointer-events:none;user-select:none;white-space:nowrap;
+}
+.footer-grid{
+  position:relative;z-index:1;display:grid;grid-template-columns:1.3fr .9fr .9fr .9fr;gap:40px;
+  padding:76px 0 46px;border-bottom:1px solid rgba(255,255,255,.08);
+}
+.footer-brand-mark{display:inline-flex;align-items:center;gap:14px;margin-bottom:20px;transition:.35s;}
+.footer-brand-mark img{
+  width:54px;height:54px;border-radius:13px;background:#fff;padding:7px;object-fit:contain;flex:0 0 auto;
+  box-shadow:0 10px 24px rgba(0,0,0,.3);transition:.4s cubic-bezier(.2,.8,.2,1);
+}
+.footer-brand-mark:hover img{transform:scale(1.06) rotate(-4deg);box-shadow:0 14px 30px rgba(200,30,58,.35);}
+.footer-brand-mark span{font-family:var(--font-d);font-weight:800;font-size:1.05rem;color:#fff;line-height:1.35;}
+.footer-tagline{font-size:.85rem;color:rgba(255,255,255,.5);line-height:1.75;max-width:340px;margin-bottom:24px;}
+.footer-contact-line{
+  display:flex;align-items:flex-start;gap:11px;font-size:.85rem;color:rgba(255,255,255,.62);
+  margin-bottom:6px;line-height:1.55;padding:6px 10px;margin-left:-10px;border-radius:9px;transition:.3s;
+}
+.footer-contact-line:hover{background:rgba(255,255,255,.05);color:rgba(255,255,255,.88);}
+.footer-contact-line i{color:var(--crimson-light);width:16px;flex:0 0 auto;margin-top:3px;}
+.footer-social-row{display:flex;gap:10px;margin-top:22px;}
+.footer-social-row a{
+  width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  color:#fff;display:flex;align-items:center;justify-content:center;font-size:.85rem;
+  transition:.35s cubic-bezier(.2,.8,.2,1);
+}
+.footer-social-row a:hover{
+  background:linear-gradient(135deg,var(--crimson),var(--crimson-deep));border-color:transparent;
+  transform:translateY(-4px) scale(1.08);box-shadow:0 12px 26px rgba(200,30,58,.42);
+}
+.footer-col-title{
+  position:relative;font-family:var(--font-d);font-weight:700;font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;
+  color:rgba(255,255,255,.42);margin-bottom:26px;padding-bottom:13px;
+}
+.footer-col-title::after{
+  content:'';position:absolute;left:0;bottom:0;width:30px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--crimson),var(--crimson-deep));
+}
+.footer-simple-links{list-style:none;margin:0;padding:0;}
+.footer-simple-links li{margin-bottom:14px;}
+.footer-simple-links a{
+  position:relative;font-size:.87rem;color:rgba(255,255,255,.66);display:inline-block;
+  transition:.3s cubic-bezier(.2,.8,.2,1);
+}
+.footer-simple-links a::before{
+  content:'\2192';position:absolute;left:-16px;top:0;opacity:0;color:var(--crimson-light);
+  transition:.3s cubic-bezier(.2,.8,.2,1);
+}
+.footer-simple-links a:hover{color:#fff;padding-left:14px;}
+.footer-simple-links a:hover::before{opacity:1;left:0;}
+@media (min-width:992px){
+  .footer-grid > div:not(:first-child){padding-left:34px;border-left:1px solid rgba(255,255,255,.08);}
+}
+.footer-baseline{
+  position:relative;z-index:1;padding:22px 0;display:flex;flex-wrap:wrap;
+  align-items:center;justify-content:space-between;gap:12px;
+}
+.footer-baseline p{margin:0;font-size:.79rem;color:rgba(255,255,255,.42);}
+.footer-baseline .motto{font-family:var(--font-d);font-size:.76rem;color:rgba(255,255,255,.32);letter-spacing:.05em;}
+@media (max-width:991.98px){
+  .footer-watermark{font-size:9rem;}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px 30px;}
+  .footer-brand-mark{margin-bottom:16px;}
+  .footer-grid > div:first-child{grid-column:1 / -1;}
+}
+@media (max-width:575.98px){
+  .footer-watermark{display:none;}
+  .footer-grid{grid-template-columns:1fr;gap:34px;padding-top:58px;}
+  .footer-baseline{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar-fixed" id="topbarFixed">
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container-xl header-inner">
+    <a href="#home" class="brand-block">
+      <img src="https://angelcollege.edu.in/wp-content/uploads/2016/11/cropped-logo4-270x270.png" alt="Angel College of Engineering and Technology" class="brand-logo">
+      <span class="brand-wordmark d-none d-md-flex">
+        <span class="l1">Angel College of</span>
+        <span class="l2">Engineering &amp; Technology</span>
+        <span class="l3">Approved by AICTE &middot; Affiliated to Anna University, Chennai &middot; Est. 2007</span>
+      </span>
+    </a>
+    <div class="header-social d-none d-md-flex">
+      <a href="https://www.instagram.com/angelcollegetirupur/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://angelcollege.edu.in/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+    </div>
+    <div class="header-cta">
+      <a href="https://mail.google.com/a/angelcollege.edu.in/" class="btn-student-login"><span class="btn-icon-badge"><i class="fa-solid fa-right-to-bracket"></i></span> Student Login</a>
+      <a href="https://angelcollege.edu.in/admissions/" class="btn-admission"><span class="btn-icon-badge"><i class="fa-solid fa-graduation-cap"></i></span> Admissions Open</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="main-nav">
+  <div class="container-xl">
+    <ul class="nav-desktop">
+      <li><a href="#home">Home</a></li>
+      <li>
+        <a href="#about">About ACET <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="drop-panel">
+          <li><a href="https://angelcollege.edu.in/about-us/"><i class="fa-solid fa-caret-right"></i> About Us</a></li>
+          <li><a href="https://angelcollege.edu.in/group-president/"><i class="fa-solid fa-caret-right"></i> Group President</a></li>
+          <li><a href="https://angelcollege.edu.in/principal/"><i class="fa-solid fa-caret-right"></i> Principal</a></li>
+          <li><a href="#vision-mission"><i class="fa-solid fa-caret-right"></i> Vision &amp; Mission</a></li>
+          <li><a href="https://angelcollege.edu.in/approvals-affiliations/"><i class="fa-solid fa-caret-right"></i> Approvals &amp; Affiliations</a></li>
+          <li><a href="https://angelcollege.edu.in/iqac/"><i class="fa-solid fa-caret-right"></i> IQAC</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#courses">Academics <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="drop-panel drop-panel--noscroll">
+          <li class="has-submenu">
+            <a href="#departments"><i class="fa-solid fa-caret-right"></i> Departments <i class="fa-solid fa-angle-right submenu-arrow"></i></a>
+            <ul class="drop-submenu">
+              <li><a href="https://angelcollege.edu.in/departments/cse/"><i class="fa-solid fa-caret-right"></i> Computer Science &amp; Engineering</a></li>
+              <li><a href="https://angelcollege.edu.in/departments/ece/"><i class="fa-solid fa-caret-right"></i> Electronics &amp; Communication Engg.</a></li>
+              <li><a href="https://angelcollege.edu.in/departments/eee/"><i class="fa-solid fa-caret-right"></i> Electrical &amp; Electronics Engg.</a></li>
+              <li><a href="https://angelcollege.edu.in/departments/mech/"><i class="fa-solid fa-caret-right"></i> Mechanical Engineering</a></li>
+              <li><a href="https://angelcollege.edu.in/departments/civil/"><i class="fa-solid fa-caret-right"></i> Civil Engineering</a></li>
+              <li><a href="https://angelcollege.edu.in/departments/ft/"><i class="fa-solid fa-caret-right"></i> Fashion Technology</a></li>
+              <li><a href="https://angelcollege.edu.in/departments/science-humanities/"><i class="fa-solid fa-caret-right"></i> Science &amp; Humanities</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="#courses"><i class="fa-solid fa-caret-right"></i> Courses Offered <i class="fa-solid fa-angle-right submenu-arrow"></i></a>
+            <ul class="drop-submenu">
+              <li><a href="https://angelcollege.edu.in/courses/"><i class="fa-solid fa-caret-right"></i> B.E. Civil Engineering</a></li>
+              <li><a href="https://angelcollege.edu.in/courses/"><i class="fa-solid fa-caret-right"></i> B.E. Mechanical Engineering</a></li>
+              <li><a href="https://angelcollege.edu.in/courses/"><i class="fa-solid fa-caret-right"></i> B.E. CSE / ECE / EEE</a></li>
+              <li><a href="https://angelcollege.edu.in/courses/"><i class="fa-solid fa-caret-right"></i> B.Tech Fashion Technology</a></li>
+              <li><a href="https://angelcollege.edu.in/courses/"><i class="fa-solid fa-caret-right"></i> M.E. CSE / Embedded / VLSI</a></li>
+            </ul>
+          </li>
+          <li><a href="https://angelcollege.edu.in/academic-calendar/"><i class="fa-solid fa-caret-right"></i> Academic Calendar</a></li>
+          <li><a href="https://angelcollege.edu.in/library/"><i class="fa-solid fa-caret-right"></i> Library</a></li>
+          <li><a href="https://angelcollege.edu.in/research-2/"><i class="fa-solid fa-caret-right"></i> Research</a></li>
+          <li><a href="https://angelcollege.edu.in/exam-cell/"><i class="fa-solid fa-caret-right"></i> Exam Cell</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://angelcollege.edu.in/admissions/">Admissions <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="drop-panel">
+          <li><a href="https://angelcollege.edu.in/admissions/"><i class="fa-solid fa-caret-right"></i> Admission Procedure</a></li>
+          <li><a href="https://angelcollege.edu.in/admissions/eligibility/"><i class="fa-solid fa-caret-right"></i> Eligibility</a></li>
+          <li><a href="https://angelcollege.edu.in/admission-brochure-2024/"><i class="fa-solid fa-caret-right"></i> Admission Brochure 2025-26</a></li>
+          <li><a href="https://angelcollege.edu.in/scholarship/"><i class="fa-solid fa-caret-right"></i> Scholarships</a></li>
+          <li><a href="https://angelcollege.edu.in/download-application-form/"><i class="fa-solid fa-caret-right"></i> Download Application Form</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#campus-life">Life @ Angel <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="drop-panel">
+          <li><a href="https://angelcollege.edu.in/campus/"><i class="fa-solid fa-caret-right"></i> Campus</a></li>
+          <li><a href="https://angelcollege.edu.in/labs/"><i class="fa-solid fa-caret-right"></i> Department Labs</a></li>
+          <li><a href="https://angelcollege.edu.in/auditorium/"><i class="fa-solid fa-caret-right"></i> Auditorium</a></li>
+          <li><a href="https://angelcollege.edu.in/sports-facilities/"><i class="fa-solid fa-caret-right"></i> Sports Facilities</a></li>
+          <li><a href="https://angelcollege.edu.in/hostel/"><i class="fa-solid fa-caret-right"></i> Hostel</a></li>
+          <li><a href="https://angelcollege.edu.in/canteen/"><i class="fa-solid fa-caret-right"></i> Canteen</a></li>
+          <li><a href="https://angelcollege.edu.in/transport/"><i class="fa-solid fa-caret-right"></i> Transport &amp; Bus Routes</a></li>
+          <li><a href="https://angelcollege.edu.in/grievances/"><i class="fa-solid fa-caret-right"></i> Grievances</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#placement">Placement <i class="fa-solid fa-chevron-down"></i></a>
+        <ul class="drop-panel">
+          <li><a href="https://angelcollege.edu.in/placement-2/"><i class="fa-solid fa-caret-right"></i> Placement Cell</a></li>
+          <li><a href="https://angelcollege.edu.in/training-placement/"><i class="fa-solid fa-caret-right"></i> Training &amp; Placement Cell</a></li>
+          <li><a href="https://angelcollege.edu.in/top-recruiters/"><i class="fa-solid fa-caret-right"></i> Top Recruiters</a></li>
+          <li><a href="https://angelcollege.edu.in/placement-statistics/"><i class="fa-solid fa-caret-right"></i> Placement Statistics</a></li>
+        </ul>
+      </li>
+      <li><a href="https://angelcollege.edu.in/photos/">Gallery</a></li>
+      <li><a href="https://angelcollege.edu.in/angel-media/">Angel @ Media</a></li>
+      <li><a href="#alumni-talk">Alumni</a></li>
+      <li><a href="https://angelcollege.edu.in/contact/">Contact Us</a></li>
+    </ul>
+    <button class="nav-toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav">
+      <span class="bars"><span></span><span></span><span></span></span> Menu
+    </button>
+  </div>
+</nav>
+
+</div><!-- /.topbar-fixed -->
+
+<!-- ================= MOBILE OFFCANVAS ================= -->
+<div class="offcanvas offcanvas-end acet-offcanvas" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="mobileNavLabel"><i class="fa-solid fa-graduation-cap" style="color:var(--crimson)"></i>&nbsp; ACET Menu</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="mobile-nav-list">
+      <li><a href="#home" data-bs-dismiss="offcanvas"><i class="fa-solid fa-caret-right"></i> Home</a></li>
+      <li>
+        <button class="mnav-toggle" data-bs-toggle="collapse" data-bs-target="#mAbout" aria-expanded="false">About ACET <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="collapse" id="mAbout">
+          <ul class="mobile-sub">
+            <li><a href="https://angelcollege.edu.in/about-us/"><i class="fa-solid fa-caret-right"></i> About Us</a></li>
+            <li><a href="https://angelcollege.edu.in/group-president/"><i class="fa-solid fa-caret-right"></i> Group President</a></li>
+            <li><a href="https://angelcollege.edu.in/principal/"><i class="fa-solid fa-caret-right"></i> Principal</a></li>
+            <li><a href="#vision-mission" data-bs-dismiss="offcanvas"><i class="fa-solid fa-caret-right"></i> Vision &amp; Mission</a></li>
+            <li><a href="https://angelcollege.edu.in/approvals-affiliations/"><i class="fa-solid fa-caret-right"></i> Approvals &amp; Affiliations</a></li>
+            <li><a href="https://angelcollege.edu.in/iqac/"><i class="fa-solid fa-caret-right"></i> IQAC</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <button class="mnav-toggle" data-bs-toggle="collapse" data-bs-target="#mAcad" aria-expanded="false">Academics <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="collapse" id="mAcad">
+          <ul class="mobile-sub">
+            <li>
+              <button class="mnav-toggle-sub" data-bs-toggle="collapse" data-bs-target="#mDept" aria-expanded="false">Departments <i class="fa-solid fa-chevron-down"></i></button>
+              <div class="collapse" id="mDept">
+                <ul class="mobile-sub-nested">
+                  <li><a href="https://angelcollege.edu.in/departments/cse/"><i class="fa-solid fa-caret-right"></i> Computer Science &amp; Engg.</a></li>
+                  <li><a href="https://angelcollege.edu.in/departments/ece/"><i class="fa-solid fa-caret-right"></i> Electronics &amp; Comm. Engg.</a></li>
+                  <li><a href="https://angelcollege.edu.in/departments/eee/"><i class="fa-solid fa-caret-right"></i> Electrical &amp; Electronics Engg.</a></li>
+                  <li><a href="https://angelcollege.edu.in/departments/mech/"><i class="fa-solid fa-caret-right"></i> Mechanical Engineering</a></li>
+                  <li><a href="https://angelcollege.edu.in/departments/civil/"><i class="fa-solid fa-caret-right"></i> Civil Engineering</a></li>
+                  <li><a href="https://angelcollege.edu.in/departments/ft/"><i class="fa-solid fa-caret-right"></i> Fashion Technology</a></li>
+                  <li><a href="https://angelcollege.edu.in/departments/science-humanities/"><i class="fa-solid fa-caret-right"></i> Science &amp; Humanities</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#courses" data-bs-dismiss="offcanvas"><i class="fa-solid fa-caret-right"></i> Courses Offered</a></li>
+            <li><a href="https://angelcollege.edu.in/academic-calendar/"><i class="fa-solid fa-caret-right"></i> Academic Calendar</a></li>
+            <li><a href="https://angelcollege.edu.in/library/"><i class="fa-solid fa-caret-right"></i> Library</a></li>
+            <li><a href="https://angelcollege.edu.in/research-2/"><i class="fa-solid fa-caret-right"></i> Research</a></li>
+            <li><a href="https://angelcollege.edu.in/exam-cell/"><i class="fa-solid fa-caret-right"></i> Exam Cell</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <button class="mnav-toggle" data-bs-toggle="collapse" data-bs-target="#mAdm" aria-expanded="false">Admissions <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="collapse" id="mAdm">
+          <ul class="mobile-sub">
+            <li><a href="https://angelcollege.edu.in/admissions/"><i class="fa-solid fa-caret-right"></i> Admission Procedure</a></li>
+            <li><a href="https://angelcollege.edu.in/admissions/eligibility/"><i class="fa-solid fa-caret-right"></i> Eligibility</a></li>
+            <li><a href="https://angelcollege.edu.in/admission-brochure-2024/"><i class="fa-solid fa-caret-right"></i> Admission Brochure 2025-26</a></li>
+            <li><a href="https://angelcollege.edu.in/scholarship/"><i class="fa-solid fa-caret-right"></i> Scholarships</a></li>
+            <li><a href="https://angelcollege.edu.in/download-application-form/"><i class="fa-solid fa-caret-right"></i> Download Application Form</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <button class="mnav-toggle" data-bs-toggle="collapse" data-bs-target="#mCamp" aria-expanded="false">Life @ Angel <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="collapse" id="mCamp">
+          <ul class="mobile-sub">
+            <li><a href="https://angelcollege.edu.in/campus/"><i class="fa-solid fa-caret-right"></i> Campus</a></li>
+            <li><a href="https://angelcollege.edu.in/labs/"><i class="fa-solid fa-caret-right"></i> Department Labs</a></li>
+            <li><a href="https://angelcollege.edu.in/auditorium/"><i class="fa-solid fa-caret-right"></i> Auditorium</a></li>
+            <li><a href="https://angelcollege.edu.in/sports-facilities/"><i class="fa-solid fa-caret-right"></i> Sports Facilities</a></li>
+            <li><a href="https://angelcollege.edu.in/hostel/"><i class="fa-solid fa-caret-right"></i> Hostel</a></li>
+            <li><a href="https://angelcollege.edu.in/canteen/"><i class="fa-solid fa-caret-right"></i> Canteen</a></li>
+            <li><a href="https://angelcollege.edu.in/transport/"><i class="fa-solid fa-caret-right"></i> Transport &amp; Bus Routes</a></li>
+            <li><a href="https://angelcollege.edu.in/grievances/"><i class="fa-solid fa-caret-right"></i> Grievances</a></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <button class="mnav-toggle" data-bs-toggle="collapse" data-bs-target="#mPlace" aria-expanded="false">Placement <i class="fa-solid fa-chevron-down"></i></button>
+        <div class="collapse" id="mPlace">
+          <ul class="mobile-sub">
+            <li><a href="https://angelcollege.edu.in/placement-2/"><i class="fa-solid fa-caret-right"></i> Placement Cell</a></li>
+            <li><a href="https://angelcollege.edu.in/training-placement/"><i class="fa-solid fa-caret-right"></i> Training &amp; Placement Cell</a></li>
+            <li><a href="https://angelcollege.edu.in/top-recruiters/"><i class="fa-solid fa-caret-right"></i> Top Recruiters</a></li>
+            <li><a href="https://angelcollege.edu.in/placement-statistics/"><i class="fa-solid fa-caret-right"></i> Placement Statistics</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="https://angelcollege.edu.in/photos/"><i class="fa-solid fa-caret-right"></i> Gallery</a></li>
+      <li><a href="https://angelcollege.edu.in/angel-media/"><i class="fa-solid fa-caret-right"></i> Angel @ Media</a></li>
+      <li><a href="#alumni-talk"><i class="fa-solid fa-caret-right"></i> Alumni</a></li>
+      <li><a href="#contact" data-bs-dismiss="offcanvas"><i class="fa-solid fa-caret-right"></i> Contact Us</a></li>
+    </ul>
+    <div class="mobile-action-buttons">
+      <a href="https://mail.google.com/a/angelcollege.edu.in/" class="mobile-action-btn"><i class="fa-solid fa-right-to-bracket"></i> Student Login</a>
+      <a href="https://www.instagram.com/angelcollegetirupur/" class="mobile-action-btn"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      <a href="https://angelcollege.edu.in/admissions/" class="mobile-action-btn"><i class="fa-solid fa-graduation-cap"></i> Admissions Open</a>
+    </div>
+    <div class="est-mobile">
+      <small style="opacity:.7;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;">Established</small>
+      <strong>2007</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO CAROUSEL ================= -->
+<section id="home" class="hero-carousel">
+  <div id="heroCarousel" class="carousel slide carousel-fade h-100" data-bs-ride="carousel" data-bs-interval="5500">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner h-100">
+      <div class="carousel-item active h-100">
+        <div class="hero-slide">
+          <img class="hero-slide-img" src="https://angelcollege.edu.in/wp-content/uploads/2016/11/ACET-Header-Photo.jpg" alt="Angel College of Engineering and Technology campus, Tirupur" loading="eager" width="1900" height="600">
+          <div class="container-xl">
+            <div class="hero-slide-content" data-aos="fade-right">
+              <span class="hero-eyebrow"><i class="fa-solid fa-graduation-cap"></i> Approved by AICTE &middot; Affiliated to Anna University</span>
+              <h1>You Dream, <span>We Educate</span></h1>
+              <p>Tirupur's first professional degree-level institution &mdash; B.E./B.Tech and M.E. programmes across seven engineering &amp; technology disciplines, promoted by the Angel Group of Companies since 2007.</p>
+              <div class="hero-btn-row">
+                <a href="https://angelcollege.edu.in/admissions/" class="btn-hero-primary"><i class="fa-solid fa-arrow-right"></i> Admission 2026</a>
+                <a href="#courses" class="btn-hero-ghost"><i class="fa-solid fa-book-open"></i> Explore Courses</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item h-100">
+        <div class="hero-slide">
+          <img class="hero-slide-img" src="https://angelcollege.edu.in/wp-content/uploads/2016/06/MG_2151-1024x683.jpg" alt="Angel College of Engineering and Technology laboratories" loading="lazy" width="1900" height="600">
+          <div class="container-xl">
+            <div class="hero-slide-content">
+              <span class="hero-eyebrow"><i class="fa-solid fa-flask"></i> Since 2007</span>
+              <h1>18.66 Acres of <span>Industry-Ready Learning</span></h1>
+              <p>State-of-the-art laboratories, an LCD-equipped classroom for every department and a centralised placement cell drive hands-on engineering training at ACET.</p>
+              <div class="hero-btn-row">
+                <a href="#departments" class="btn-hero-primary"><i class="fa-solid fa-arrow-right"></i> Our Departments</a>
+                <a href="#about" class="btn-hero-ghost"><i class="fa-solid fa-circle-info"></i> About ACET</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item h-100">
+        <div class="hero-slide">
+          <img class="hero-slide-img" src="https://angelcollege.edu.in/wp-content/uploads/2016/11/ACET-Header-Photo.jpg" alt="Placement drive at Angel College of Engineering and Technology" loading="lazy" width="1900" height="600">
+          <div class="container-xl">
+            <div class="hero-slide-content">
+              <span class="hero-eyebrow"><i class="fa-solid fa-briefcase"></i> Careers in Engineering</span>
+              <h1>Building <span>Industry-Ready</span> Engineers</h1>
+              <p>A dedicated Training &amp; Placement Cell connects students with recruiters like TCS, Cognizant, Tech Mahindra, HCL and Texas Instruments across the country.</p>
+              <div class="hero-btn-row">
+                <a href="#placement" class="btn-hero-primary"><i class="fa-solid fa-arrow-right"></i> Placement Cell</a>
+                <a href="#campus-life" class="btn-hero-ghost"><i class="fa-solid fa-building"></i> Campus Life</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- ================= HERO STAT STRIP ================= -->
+<div class="container-xl hero-stat-strip">
+  <div class="row g-3 g-md-4">
+    <div class="col-6 col-md-3" data-aos="fade-up">
+      <div class="hero-stat-card"><i class="fa-solid fa-calendar-days"></i><h3>2007</h3><span>Year Established</span></div>
+    </div>
+    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="80">
+      <div class="hero-stat-card"><i class="fa-solid fa-book-open"></i><h3>10+</h3><span>Programmes Offered</span></div>
+    </div>
+    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="160">
+      <div class="hero-stat-card"><i class="fa-solid fa-diagram-project"></i><h3>7</h3><span>Departments</span></div>
+    </div>
+    <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="240">
+      <div class="hero-stat-card"><i class="fa-solid fa-award"></i><h3>AICTE</h3><span>Approved Institution</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container-xl">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-7" data-aos="fade-right">
+        <span class="eyebrow">About the College</span>
+        <h2 class="section-title">Tirupur's First Professional Degree Institution, Since 2007</h2>
+        <p class="section-sub" style="margin-top:16px;">
+          Angel College of Engineering and Technology is sponsored by Angel Institutions, a public charitable trust
+          founded by industrialist Engineer D. Sachithanantham, B.E., President of the Angel Group of Companies.
+          Approved by AICTE, New Delhi and affiliated to Anna University, Chennai, ACET was the first professional
+          degree-level institution to open in Tirupur &mdash; a town known for its enterprising, industrial spirit.
+        </p>
+        <p>
+          The college's flourishing industrial surroundings feed directly into student employability, with
+          state-of-the-art laboratories upgraded every year, an LCD projector in every department and a central
+          library holding more than 20,000 volumes. The ISO 9001:2015-certified, 18.66-acre green campus is built to
+          meet the demands of a fast-moving corporate sector.
+        </p>
+        <a href="https://angelcollege.edu.in/about-us/" class="btn-hero-primary" style="margin-top:12px;background:var(--brand-gradient);box-shadow:0 10px 26px rgba(27,68,176,.3);"><i class="fa-solid fa-arrow-right"></i> Read More</a>
+      </div>
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="about-photo-wrap">
+          <div class="about-photo-main">
+            <img src="https://angelcollege.edu.in/wp-content/uploads/2016/06/MG_2151-1024x683.jpg" alt="Angel College of Engineering and Technology campus">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="about-affiliation-strip" data-aos="fade-up">
+      <span class="affiliation-title">Affiliated &amp; Approved</span>
+      <div class="affiliation-logos">
+        <div class="affiliation-logo-item">
+          <img src="https://placehold.co/100x100/1B44B0/ffffff?text=AICTE" alt="AICTE" width="100" height="100" loading="lazy">
+          <span>AICTE, New Delhi</span>
+        </div>
+        <div class="affiliation-logo-item">
+          <img src="https://placehold.co/100x100/0B1F4D/ffffff?text=Anna+Univ" alt="Anna University Chennai" width="100" height="100" loading="lazy">
+          <span>Anna University, Chennai</span>
+        </div>
+        <div class="affiliation-logo-item">
+          <img src="https://placehold.co/100x100/C81E3A/ffffff?text=ISO" alt="ISO 9001:2015 Certified" width="100" height="100" loading="lazy">
+          <span>ISO 9001:2015 Certified</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS & ANNOUNCEMENTS ================= -->
+<section id="announcements" class="section" style="background:#fff;">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Explore ACET</span>
+      <h2 class="section-title">Campus Video &amp; Announcements</h2>
+    </div>
+    <div class="row g-5 align-items-stretch">
+      <div class="col-lg-6 d-flex flex-column" style="min-width:0;" data-aos="fade-right">
+        <h4 style="font-family:var(--font-d);font-weight:700;font-size:1.05rem;color:var(--navy);display:flex;align-items:center;gap:10px;margin-bottom:16px;"><i class="fa-solid fa-circle-play" style="color:var(--crimson-deep);"></i> Campus Video</h4>
+        <div class="d-flex flex-column flex-grow-1 justify-content-center">
+          <div class="video-frame" id="acetVideoTrigger" data-video-id="zMh_vIOujko">
+            <img src="https://img.youtube.com/vi/zMh_vIOujko/maxresdefault.jpg" alt="Angel College of Engineering and Technology campus video" loading="lazy">
+            <span class="video-corner tl"></span>
+            <span class="video-corner tr"></span>
+            <span class="video-corner bl"></span>
+            <span class="video-corner br"></span>
+            <div class="video-play-btn"><i class="fa-solid fa-play"></i></div>
+            <div class="video-caption">
+              <span>Campus Video</span>
+              <h3>Angel College of Engineering and Technology, Tirupur</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex flex-column" data-aos="fade-left">
+        <div class="announce-panel">
+          <div class="announce-panel-head">
+            <h4><i class="fa-solid fa-calendar-days" style="color:var(--crimson)"></i> Latest Announcements</h4>
+            <span>Live Feed</span>
+          </div>
+          <div class="announce-marquee-mask">
+            <div class="announce-track">
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> Recent</a><h5>SCM Garments Pvt Ltd, Tiruppur &mdash; three B.Tech FT students placed as Trainees, &#8377;2.16 LPA</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/training-placement/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> 14 Feb 2025</a><h5>Aquarelle India Pvt Ltd, Bangalore &mdash; pool campus drive for FT &amp; Textile Technology students</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/research-2/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> 18 Feb 2025</a><h5>FDP Webinar &mdash; "How to Write and Publish a Scientific Paper" by Dr. C. Prakash</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/academic-calendar/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> Orientation</a><h5>First Year Orientation Day 4 &mdash; Smart Phone Service &amp; Training by Mr. Krishnakumar</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/contact/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> Notice</a><h5>Passed-out students may collect Transfer &amp; Course Completion Certificates from the Office</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/academic-calendar/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> Orientation</a><h5>First Year Orientation Day 3 &mdash; Motivational Talk by Mr. J. Soundarapandian, VAO</h5></div></div>
+              <!-- duplicate set for seamless vertical loop -->
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> Recent</a><h5>SCM Garments Pvt Ltd, Tiruppur &mdash; three B.Tech FT students placed as Trainees, &#8377;2.16 LPA</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/training-placement/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> 14 Feb 2025</a><h5>Aquarelle India Pvt Ltd, Bangalore &mdash; pool campus drive for FT &amp; Textile Technology students</h5></div></div>
+              <div class="announce-item"><div class="announce-icon-block"><i class="fa-solid fa-bullhorn"></i></div><div class="body"><a href="https://angelcollege.edu.in/research-2/" class="announce-date-text"><i class="fa-solid fa-calendar-day"></i> 18 Feb 2025</a><h5>FDP Webinar &mdash; "How to Write and Publish a Scientific Paper" by Dr. C. Prakash</h5></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="theatre-overlay" id="theatreOverlay">
+  <div class="theatre-inner">
+    <button class="theatre-close" id="theatreClose" aria-label="Close video"><i class="fa-solid fa-xmark"></i></button>
+    <div id="theatreIframeWrap" style="width:100%;height:100%;"></div>
+  </div>
+</div>
+
+<!-- ================= VISION & MISSION ================= -->
+<section id="vision-mission" class="section" style="background:#fff;">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Guiding Principles</span>
+      <h2 class="section-title">Vision &amp; Mission</h2>
+      <div class="section-title-rule mx-auto"></div>
+    </div>
+    <div class="vm2-panel" data-aos="fade-up">
+      <div class="vm2-col">
+        <i class="fa-solid fa-eye vm2-watermark"></i>
+        <span class="vm2-tag"><i class="fa-solid fa-eye"></i> Our Vision</span>
+        <div class="vm2-goal">
+          <span class="vm2-goal-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <p>To become a center of academic excellence by imparting quality technical education through continuous improvement.</p>
+        </div>
+        <div class="vm2-goal">
+          <span class="vm2-goal-icon"><i class="fa-solid fa-earth-asia"></i></span>
+          <p>To instill in students the drive and interest to be competitive at a global level.</p>
+        </div>
+        <div class="vm2-goal">
+          <span class="vm2-goal-icon"><i class="fa-solid fa-landmark-dome"></i></span>
+          <p>To grow into a Deemed University.</p>
+        </div>
+      </div>
+      <div class="vm2-divider"></div>
+      <div class="vm2-col">
+        <i class="fa-solid fa-quote-right vm2-watermark"></i>
+        <span class="vm2-tag"><i class="fa-solid fa-bullseye"></i> Our Mission</span>
+        <span class="vm2-quote-mark">&ldquo;</span>
+        <p class="vm2-quote">
+          Angel College of Engineering and Technology is devoted to equipping students with the knowledge, skill
+          and attitude to continuously improve the standard of living of individuals, families, industries and
+          society, on par with global standards, through quality education in Engineering and Technology. ACET
+          nurtures every student to dream and realise professional growth in a congenial environment shaped by a
+          versatile faculty, instilling the values and character needed for socio-economic and technological
+          growth at a global level.
+        </p>
+        <div class="vm2-signoff">
+          <span class="vm2-signoff-mark"><i class="fa-solid fa-graduation-cap"></i></span>
+          <span>Angel College of Engineering and Technology, Tirupur</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COURSES OFFERED ================= -->
+<section id="courses" class="section courses-section" style="background:var(--bg);">
+  <div class="container-xl">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Academic Pathway</span>
+      <h2 class="section-title">Courses Offered</h2>
+      <p class="section-sub mx-auto" style="text-align:center;">Six undergraduate engineering &amp; technology programmes, plus postgraduate specialisations, approved by AICTE.</p>
+    </div>
+
+    <div class="course-tabs" data-aos="fade-up">
+      <button class="course-tab active" onclick="showCourseTab('ug', this)" type="button">Undergraduate <span>6 Programmes</span></button>
+      <button class="course-tab" onclick="showCourseTab('pg', this)" type="button">Postgraduate <span>4 Programmes</span></button>
+    </div>
+
+    <div class="course-panel active" id="course-panel-ug" data-aos="fade-up">
+      <div class="course-grid">
+
+        <div class="course-card" style="--a1:#1B44B0;--a2:#122E7C;">
+          <span class="course-card-num">01</span>
+          <div class="course-card-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">4 Years</span><span class="course-card-badge alt">60 Seats</span></div>
+          <h3>B.E. Computer Science &amp; Engineering</h3>
+          <p>Software design, algorithms and systems engineering for the modern technology industry.</p>
+          <a href="https://angelcollege.edu.in/departments/cse/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#0B1F4D;--a2:#1B44B0;">
+          <span class="course-card-num">02</span>
+          <div class="course-card-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">4 Years</span><span class="course-card-badge alt">60 Seats</span></div>
+          <h3>B.E. Electronics &amp; Communication Engg.</h3>
+          <p>Communication systems, embedded design and signal processing fundamentals.</p>
+          <a href="https://angelcollege.edu.in/departments/ece/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#C81E3A;--a2:#8C0F26;">
+          <span class="course-card-num">03</span>
+          <div class="course-card-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">4 Years</span><span class="course-card-badge alt">60 Seats</span></div>
+          <h3>B.E. Electrical &amp; Electronics Engg.</h3>
+          <p>Power systems, control engineering and electrical machine design.</p>
+          <a href="https://angelcollege.edu.in/departments/eee/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#122E7C;--a2:#0B1F4D;">
+          <span class="course-card-num">04</span>
+          <div class="course-card-icon"><i class="fa-solid fa-gears"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">4 Years</span><span class="course-card-badge alt">60 Seats</span></div>
+          <h3>B.E. Mechanical Engineering</h3>
+          <p>Thermal systems, manufacturing and design engineering with hands-on workshop training.</p>
+          <a href="https://angelcollege.edu.in/departments/mech/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#0B1F4D;--a2:#122E7C;">
+          <span class="course-card-num">05</span>
+          <div class="course-card-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">4 Years</span><span class="course-card-badge alt">60 Seats</span></div>
+          <h3>B.E. Civil Engineering</h3>
+          <p>Structural design, construction management and surveying for the built environment.</p>
+          <a href="https://angelcollege.edu.in/departments/civil/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#8C0F26;--a2:#0B1F4D;">
+          <span class="course-card-num">06</span>
+          <div class="course-card-icon"><i class="fa-solid fa-shirt"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">4 Years</span><span class="course-card-badge alt">Co-Ed</span></div>
+          <h3>B.Tech Fashion Technology</h3>
+          <p>Apparel production, textile science and design &mdash; anchored by Tirupur's global knitwear industry.</p>
+          <a href="https://angelcollege.edu.in/departments/ft/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="course-panel" id="course-panel-pg" data-aos="fade-up">
+      <div class="course-grid">
+
+        <div class="course-card" style="--a1:#1B44B0;--a2:#0B1F4D;">
+          <span class="course-card-num">01</span>
+          <div class="course-card-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">2 Years</span><span class="course-card-badge alt">24 Seats</span></div>
+          <h3>M.E. Computer Science &amp; Engineering</h3>
+          <p>Advanced software systems, algorithms and research-oriented computing specialisation.</p>
+          <a href="https://angelcollege.edu.in/departments/cse/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#C81E3A;--a2:#8C0F26;">
+          <span class="course-card-num">02</span>
+          <div class="course-card-icon"><i class="fa-solid fa-sim-card"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">2 Years</span><span class="course-card-badge alt">18 Seats</span></div>
+          <h3>M.E. Embedded Systems</h3>
+          <p>Microcontroller-based design, IoT and real-time embedded system architecture.</p>
+          <a href="https://angelcollege.edu.in/departments/ece/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#122E7C;--a2:#1B44B0;">
+          <span class="course-card-num">03</span>
+          <div class="course-card-icon"><i class="fa-solid fa-microchip"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">2 Years</span><span class="course-card-badge alt">9 Seats</span></div>
+          <h3>M.E. VLSI Design</h3>
+          <p>Chip-level design, semiconductor fabrication concepts and digital circuit specialisation.</p>
+          <a href="https://angelcollege.edu.in/departments/ece/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="course-card" style="--a1:#8C0F26;--a2:#0B1F4D;">
+          <span class="course-card-num">04</span>
+          <div class="course-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+          <div class="course-card-badges"><span class="course-card-badge">2 Years</span><span class="course-card-badge alt">9 Seats</span></div>
+          <h3>M.E. Engineering Design</h3>
+          <p>Advanced mechanical design, CAD/CAM and product development methodology.</p>
+          <a href="https://angelcollege.edu.in/departments/mech/" class="cp-link">Explore Programme <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DEPARTMENTS ================= -->
+<section id="departments" class="section" style="background:#fff;">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Academics</span>
+      <h2 class="section-title">Our Departments</h2>
+      <p class="section-sub mx-auto" style="text-align:center;">Seven specialised departments driving teaching, research and industry-ready training at ACET.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <a href="https://angelcollege.edu.in/departments/cse/" class="dept-card-v2" style="--a1:#1B44B0;--a2:#122E7C;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-laptop-code"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Computer Science &amp; Engineering</h4>
+            <p>Software engineering, AI and systems design for the modern technology workforce.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <a href="https://angelcollege.edu.in/departments/ece/" class="dept-card-v2" style="--a1:#0B1F4D;--a2:#1B44B0;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Electronics &amp; Communication Engg.</h4>
+            <p>Communication networks, VLSI and embedded systems training with modern lab facilities.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <a href="https://angelcollege.edu.in/departments/eee/" class="dept-card-v2" style="--a1:#C81E3A;--a2:#8C0F26;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-bolt"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Electrical &amp; Electronics Engg.</h4>
+            <p>Power systems, control engineering and electrical machine design fundamentals.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up">
+        <a href="https://angelcollege.edu.in/departments/mech/" class="dept-card-v2" style="--a1:#122E7C;--a2:#0B1F4D;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-gears"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Mechanical Engineering</h4>
+            <p>Thermal systems, manufacturing processes and design engineering with workshop practice.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+        <a href="https://angelcollege.edu.in/departments/civil/" class="dept-card-v2" style="--a1:#0B1F4D;--a2:#122E7C;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-drafting-compass"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Civil Engineering</h4>
+            <p>Structural design, construction management and surveying for the built environment.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+        <a href="https://angelcollege.edu.in/departments/ft/" class="dept-card-v2" style="--a1:#8C0F26;--a2:#0B1F4D;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-shirt"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Fashion Technology</h4>
+            <p>Apparel production and textile design, anchored by Tirupur's global knitwear industry.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+      <div class="col-md-6 col-lg-4 mx-auto" data-aos="fade-up">
+        <a href="https://angelcollege.edu.in/departments/science-humanities/" class="dept-card-v2" style="--a1:#1B44B0;--a2:#0B1F4D;">
+          <div class="dept-card-v2-head">
+            <span class="dept-card-v2-tag">Dept.</span>
+            <div class="dept-card-v2-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          </div>
+          <div class="dept-card-v2-body">
+            <h4>Science &amp; Humanities</h4>
+            <p>English, Physics, Chemistry &amp; Mathematics &mdash; the foundation for every engineering discipline.</p>
+            <span class="dept-card-v2-link">View Department <i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CAMPUS LIFE ================= -->
+<section id="campus-life" class="section section-navy campus-life-section">
+  <div class="container-xl">
+    <div class="row align-items-end mb-5 g-3" data-aos="fade-up">
+      <div class="col-lg-8">
+        <span class="eyebrow">Beyond the Classroom</span>
+        <h2 class="section-title">Campus Life</h2>
+        <p class="section-sub" style="margin-top:12px;">A residential campus built around student wellbeing &mdash; hover a panel to explore.</p>
+      </div>
+      <div class="col-lg-4 text-lg-end">
+        <a href="https://angelcollege.edu.in/life-at-angel/" target="_blank" rel="noopener" class="cp-link">View Full Campus Life <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="campus-expando" data-aos="fade-up">
+      <a href="https://angelcollege.edu.in/library/" target="_blank" rel="noopener" class="campus-expando-panel" style="--a1:#1B44B0;--a2:#0B1F4D;--img:url('https://angelcollege.edu.in/wp-content/uploads/2016/11/ACET-Library-1024x683.jpg');">
+        <span class="campus-expando-num">01</span>
+        <div class="campus-expando-icon"><i class="fa-solid fa-book"></i></div>
+        <div class="campus-expando-content">
+          <span class="campus-expando-title">Library</span>
+          <p class="campus-expando-desc">20,000+ volumes across 4,900 titles, plus a digital library of e-journals.</p>
+        </div>
+      </a>
+      <a href="https://angelcollege.edu.in/hostel/" target="_blank" rel="noopener" class="campus-expando-panel" style="--a1:#0B1F4D;--a2:#122E7C;--img:url('https://angelcollege.edu.in/wp-content/uploads/2017/10/ACET-Boys-Hostel-1024x683.jpg');">
+        <span class="campus-expando-num">02</span>
+        <div class="campus-expando-icon"><i class="fa-solid fa-building"></i></div>
+        <div class="campus-expando-content">
+          <span class="campus-expando-title">Hostel</span>
+          <p class="campus-expando-desc">Separate Boys' &amp; Girls' hostels accommodating up to 800 students, with mess facilities.</p>
+        </div>
+      </a>
+      <a href="https://angelcollege.edu.in/canteen/" target="_blank" rel="noopener" class="campus-expando-panel" style="--a1:#C81E3A;--a2:#8C0F26;--img:url('https://angelcollege.edu.in/wp-content/uploads/2017/10/Mess-Inner-View-1024x683.jpg');">
+        <span class="campus-expando-num">03</span>
+        <div class="campus-expando-icon"><i class="fa-solid fa-utensils"></i></div>
+        <div class="campus-expando-content">
+          <span class="campus-expando-title">Canteen</span>
+          <p class="campus-expando-desc">Meals and refreshments across the campus day.</p>
+        </div>
+      </a>
+      <a href="https://angelcollege.edu.in/sports-facilities/" target="_blank" rel="noopener" class="campus-expando-panel" style="--a1:#122E7C;--a2:#1B44B0;--img:url('https://angelcollege.edu.in/wp-content/uploads/2016/11/ACET-Volly-Ball-Ground-1024x683.jpg');">
+        <span class="campus-expando-num">04</span>
+        <div class="campus-expando-icon"><i class="fa-solid fa-volleyball"></i></div>
+        <div class="campus-expando-content">
+          <span class="campus-expando-title">Sports &amp; Games</span>
+          <p class="campus-expando-desc">Gymnasium plus indoor &amp; outdoor facilities for student wellbeing.</p>
+        </div>
+      </a>
+      <a href="https://angelcollege.edu.in/labs/" target="_blank" rel="noopener" class="campus-expando-panel" style="--a1:#8C0F26;--a2:#0B1F4D;--img:url('https://angelcollege.edu.in/wp-content/uploads/2016/06/Internet-Facility-ACET-0-2z214529kkjpt6r87enncw.jpg');">
+        <span class="campus-expando-num">05</span>
+        <div class="campus-expando-icon"><i class="fa-solid fa-flask"></i></div>
+        <div class="campus-expando-content">
+          <span class="campus-expando-title">Department Labs</span>
+          <p class="campus-expando-desc">State-of-the-art laboratories upgraded with new equipment every year.</p>
+        </div>
+      </a>
+      <a href="https://angelcollege.edu.in/auditorium/" target="_blank" rel="noopener" class="campus-expando-panel" style="--a1:#0B1F4D;--a2:#C81E3A;--img:url('https://angelcollege.edu.in/wp-content/uploads/2016/06/Conference-Hall-at-ACET-1-2z2144t7vzhc939hfoac5c.jpg');">
+        <span class="campus-expando-num">06</span>
+        <div class="campus-expando-icon"><i class="fa-solid fa-landmark"></i></div>
+        <div class="campus-expando-content">
+          <span class="campus-expando-title">Auditorium</span>
+          <p class="campus-expando-desc">The A.P.J. Abdul Kalam Hall &mdash; centralised AC seating for 350, for seminars &amp; placement drives.</p>
+        </div>
+      </a>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top:28px;" data-aos="fade-up">
+      <a href="https://angelcollege.edu.in/transport/" target="_blank" rel="noopener" class="activity-chip"><i class="fa-solid fa-bus"></i> Transport &amp; Bus Routes</a>
+      <a href="https://angelcollege.edu.in/grievances/" target="_blank" rel="noopener" class="activity-chip"><i class="fa-solid fa-shield-halved"></i> Grievance Redressal</a>
+      <a href="https://angelcollege.edu.in/campus/" target="_blank" rel="noopener" class="activity-chip"><i class="fa-solid fa-water"></i> Water Treatment Plant</a>
+      <a href="https://angelcollege.edu.in/" target="_blank" rel="noopener" class="activity-chip"><i class="fa-solid fa-hands-helping"></i> NSS &amp; Youth Red Cross</a>
+      <a href="https://angelcollege.edu.in/" target="_blank" rel="noopener" class="activity-chip"><i class="fa-solid fa-people-group"></i> Social Welfare Clubs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLACEMENT ================= -->
+<section id="placement" class="section section-navy placement-section-v2">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Careers at Angel</span>
+      <h2 class="section-title">Placement Cell</h2>
+      <p class="section-sub mx-auto" style="text-align:center;margin-top:14px;max-width:700px;">
+        ACET's Training &amp; Placement Cell works closely with recruiters across engineering, IT and Tirupur's
+        textile &amp; apparel industry &mdash; running recruitment readiness training and coordinating campus drives
+        right through the final year.
+      </p>
+    </div>
+
+    <div class="placement-stat-row" data-aos="fade-up">
+      <div class="placement-stat">
+        <span class="num">&#8377;3.6L</span>
+        <span class="label">Highest Package<br>Recent Placements</span>
+      </div>
+      <div class="placement-stat-divider"></div>
+      <div class="placement-stat">
+        <span class="num">10+</span>
+        <span class="label">Hiring Partners<br>Across Industries</span>
+      </div>
+      <div class="placement-stat-divider"></div>
+      <div class="placement-stat">
+        <span class="num">5</span>
+        <span class="label">Departments<br>Actively Placed</span>
+      </div>
+    </div>
+
+    <div class="row g-5 align-items-start" style="margin-top:24px;">
+      <div class="col-lg-5" data-aos="fade-right">
+        <h4 class="placement-panel-title"><i class="fa-solid fa-building-circle-check"></i> Recruiting Partners</h4>
+        <div class="recruiter-cloud">
+          <span>TCS</span><span>Infosys</span><span>Cognizant</span><span>Tech Mahindra</span><span>HCL</span>
+          <span>Oracle</span><span>BHEL</span><span>Texas Instruments</span><span>Microsoft</span><span>Sutherland</span>
+        </div>
+        <div class="placement-success-badge">
+          <i class="fa-solid fa-star"></i>
+          <p><strong>4 students</strong> placed as Network Engineers at Silicon House &mdash; &#8377;3.5 LPA package.</p>
+        </div>
+        <div class="mt-4 d-flex flex-wrap gap-3">
+          <a href="https://angelcollege.edu.in/placement-2/" class="btn-hero-primary" style="background:linear-gradient(120deg,var(--crimson) 0%,var(--crimson-deep) 100%);box-shadow:0 10px 26px rgba(140,15,38,.4);"><i class="fa-solid fa-arrow-right"></i> Placement Details</a>
+          <a href="https://angelcollege.edu.in/top-recruiters/" class="btn-hero-ghost"><i class="fa-solid fa-building"></i> Top Recruiters</a>
+        </div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-left">
+        <div class="placement-timeline">
+          <div class="pt-item">
+            <div class="pt-node">01</div>
+            <div class="pt-body">
+              <h5>Recruitment Readiness Training</h5>
+              <p>Structured programmes preparing students for interviews, aptitude tests and industry expectations well before final year.</p>
+            </div>
+          </div>
+          <div class="pt-item">
+            <div class="pt-node">02</div>
+            <div class="pt-body">
+              <h5>Industry Connect &amp; Campus Drives</h5>
+              <p>Recruiters including TCS, Cognizant, Tech Mahindra, HCL, Oracle, BHEL, Texas Instruments &amp; Sutherland visit for campus and pool campus drives.</p>
+            </div>
+          </div>
+          <div class="pt-item">
+            <div class="pt-node">03</div>
+            <div class="pt-body">
+              <h5>Career Pathways</h5>
+              <p>Guidance across software, core engineering, textile &amp; apparel and higher-studies routes, tailored to each student's strengths.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VOICES ================= -->
+<section id="alumni" class="section alumni-section" style="background:var(--bg);">
+  <div class="container-xl">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">In Their Words</span>
+      <h2 class="section-title">What Visitors &amp; Dignitaries Say</h2>
+      <div class="section-title-rule mx-auto"></div>
+    </div>
+    <div class="swiper voices-swiper" data-aos="fade-up">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="voice-card">
+            <i class="fa-solid fa-quote-left voice-quote-icon"></i>
+            <p>A beautiful institute in idyllic surroundings. The management, Chairman, Principal, CEO and the faculty are committed and sincere &mdash; the institute will certainly become a torch bearer in this district.</p>
+            <h5>Dr. V. Irai Anbu, I.A.S.</h5>
+            <span>Chief Secretary, Government of Tamil Nadu</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="voice-card">
+            <i class="fa-solid fa-quote-left voice-quote-icon"></i>
+            <p>A very good effort to mould the career of budding graduates towards a better future. I wish this to be continued by this institute as a yeoman service to the society.</p>
+            <h5>Mr. Raja M Shanmugham</h5>
+            <span>Chairman, NIFT-TEA, Tiruppur</span>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="voice-card">
+            <i class="fa-solid fa-quote-left voice-quote-icon"></i>
+            <p>I am impressed with the culture that the faculty practise in college. The ambience of the college is highly impressive. I wish all the best to the students &amp; faculty of the college.</p>
+            <h5>Dr. S. Kuppuswami</h5>
+            <span>Principal, Kongu Engineering College</span>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ALUMNI TALKS ================= -->
+<section id="alumni-talk" class="section alumni-talks-section" style="background:#fff;">
+  <div class="container-xl">
+    <div class="text-center mb-4" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Angel Alumni</span>
+      <h2 class="section-title">Alumni Talks</h2>
+      <div class="section-title-rule mx-auto"></div>
+      <p class="section-sub mx-auto" style="text-align:center;margin-top:10px;">Graduates from across our departments, on the years that shaped their careers.</p>
+    </div>
+    <div class="swiper alumni-talks-swiper" data-aos="fade-up">
+      <button class="atalk-nav prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="atalk-nav next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="atalk-card">
+            <div class="atalk-top">
+              <div class="atalk-avatar"><img src="https://ui-avatars.com/api/?name=K+Priyanka&background=1B44B0&color=fff&size=160&bold=true" alt="K. Priyanka"></div>
+              <div>
+                <div class="atalk-name">K. Priyanka</div>
+                <div class="atalk-meta">B.E. CSE &middot; Batch 2019&ndash;2023</div>
+                <span class="atalk-dept-pill">Computer Science</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-quote-left atalk-quote-icon"></i>
+            <p class="atalk-message">The project-based learning at ACET pushed me to build real applications, not just study theory. That hands-on exposure made all the difference in my campus placement interviews.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="atalk-card">
+            <div class="atalk-top">
+              <div class="atalk-avatar"><img src="https://ui-avatars.com/api/?name=R+Dinesh&background=C81E3A&color=fff&size=160&bold=true" alt="R. Dinesh Kumar"></div>
+              <div>
+                <div class="atalk-name">R. Dinesh Kumar</div>
+                <div class="atalk-meta">B.E. ECE &middot; Batch 2018&ndash;2022</div>
+                <span class="atalk-dept-pill">Electronics &amp; Comm.</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-quote-left atalk-quote-icon"></i>
+            <p class="atalk-message">Our communication lab gave me practical experience with the same tools I use at work today. The faculty always made time to guide us beyond the syllabus.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="atalk-card">
+            <div class="atalk-top">
+              <div class="atalk-avatar"><img src="https://ui-avatars.com/api/?name=V+Nandhini&background=0B1F4D&color=fff&size=160&bold=true" alt="V. Nandhini"></div>
+              <div>
+                <div class="atalk-name">V. Nandhini</div>
+                <div class="atalk-meta">B.E. EEE &middot; Batch 2020&ndash;2024</div>
+                <span class="atalk-dept-pill">Electrical &amp; Electronics</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-quote-left atalk-quote-icon"></i>
+            <p class="atalk-message">Working in the machines lab taught me troubleshooting skills I still rely on daily. ACET's practical approach to electrical engineering set a strong foundation for my career.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="atalk-card">
+            <div class="atalk-top">
+              <div class="atalk-avatar"><img src="https://ui-avatars.com/api/?name=S+Arun&background=122E7C&color=fff&size=160&bold=true" alt="S. Arun Prasath"></div>
+              <div>
+                <div class="atalk-name">S. Arun Prasath</div>
+                <div class="atalk-meta">B.E. Mechanical &middot; Batch 2017&ndash;2021</div>
+                <span class="atalk-dept-pill">Mechanical</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-quote-left atalk-quote-icon"></i>
+            <p class="atalk-message">The workshop training and thermal lab sessions gave me a genuine feel for manufacturing before I ever stepped into a factory. That confidence stayed with me.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="atalk-card">
+            <div class="atalk-top">
+              <div class="atalk-avatar"><img src="https://ui-avatars.com/api/?name=M+Karthikeyan&background=8C0F26&color=fff&size=160&bold=true" alt="M. Karthikeyan"></div>
+              <div>
+                <div class="atalk-name">M. Karthikeyan</div>
+                <div class="atalk-meta">B.E. Civil &middot; Batch 2019&ndash;2023</div>
+                <span class="atalk-dept-pill">Civil Engineering</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-quote-left atalk-quote-icon"></i>
+            <p class="atalk-message">Fieldwork and surveying practicals made civil engineering come alive for me. I still use techniques I first learned in our structural design classes.</p>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="atalk-card">
+            <div class="atalk-top">
+              <div class="atalk-avatar"><img src="https://ui-avatars.com/api/?name=P+Deepika&background=1B44B0&color=fff&size=160&bold=true" alt="P. Deepika"></div>
+              <div>
+                <div class="atalk-name">P. Deepika</div>
+                <div class="atalk-meta">B.Tech Fashion Tech. &middot; Batch 2018&ndash;2022</div>
+                <span class="atalk-dept-pill">Fashion Technology</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-quote-left atalk-quote-icon"></i>
+            <p class="atalk-message">Being so close to Tirupur's garment industry meant our classes were never just theory. I walked into my first job already understanding the production floor.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section faq-section">
+  <div class="container-xl">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <span class="eyebrow" style="justify-content:center;">Need to Know</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="section-title-rule mx-auto"></div>
+    </div>
+    <div class="faq-wrap" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="faq-item active">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <div class="faq-q-text">Which programmes does ACET offer?</div>
+          <div class="faq-toggle-icon"></div>
+        </button>
+        <div class="faq-answer-wrap">
+          <div class="faq-answer-inner">
+            <p>ACET offers B.E. in CSE, ECE, EEE, Mechanical and Civil Engineering, B.Tech in Fashion Technology (all 4 years), and M.E. in CSE, Embedded Systems, VLSI Design &amp; Engineering Design at the postgraduate level.</p>
+            <div class="faq-tags"><span class="faq-tag">Courses</span><span class="faq-tag">Overview</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <div class="faq-q-text">Is ACET approved and affiliated?</div>
+          <div class="faq-toggle-icon"></div>
+        </button>
+        <div class="faq-answer-wrap">
+          <div class="faq-answer-inner">
+            <p>Yes. Angel College of Engineering and Technology is approved by AICTE, New Delhi, and affiliated to Anna University, Chennai. The institution is also ISO 9001:2015 certified.</p>
+            <div class="faq-tags"><span class="faq-tag">AICTE</span><span class="faq-tag">Anna University</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <div class="faq-q-text">What is the eligibility for B.E./B.Tech admission?</div>
+          <div class="faq-toggle-icon"></div>
+        </button>
+        <div class="faq-answer-wrap">
+          <div class="faq-answer-inner">
+            <p>A pass in HSC (10+2) with Mathematics, Physics and Chemistry as compulsory subjects, meeting the minimum aggregate prescribed by the Government of Tamil Nadu and Anna University counselling norms. See the Eligibility page for full details.</p>
+            <div class="faq-tags"><span class="faq-tag">Eligibility</span><span class="faq-tag">Admission</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <div class="faq-q-text">What campus facilities are available?</div>
+          <div class="faq-toggle-icon"></div>
+        </button>
+        <div class="faq-answer-wrap">
+          <div class="faq-answer-inner">
+            <p>Library, hostel, canteen, auditorium, transport, sports &amp; gymnasium, department labs and a water treatment plant &mdash; details for each are in the Life @ Angel section of the menu.</p>
+            <div class="faq-tags"><span class="faq-tag">Campus Life</span><span class="faq-tag">Hostel</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <div class="faq-q-text">Does ACET help with placements?</div>
+          <div class="faq-toggle-icon"></div>
+        </button>
+        <div class="faq-answer-wrap">
+          <div class="faq-answer-inner">
+            <p>Yes. The Training &amp; Placement Cell runs recruitment readiness training and coordinates campus &amp; pool campus drives with recruiters such as TCS, Cognizant, Tech Mahindra, HCL and Texas Instruments.</p>
+            <div class="faq-tags"><span class="faq-tag">Placement</span><span class="faq-tag">Careers</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          <div class="faq-q-text">How do I apply for admission?</div>
+          <div class="faq-toggle-icon"></div>
+        </button>
+        <div class="faq-answer-wrap">
+          <div class="faq-answer-inner">
+            <p>Application forms can be downloaded from the website or collected in person &mdash; see the Admissions menu for the procedure, eligibility criteria and the 2025-26 brochure.</p>
+            <div class="faq-tags"><span class="faq-tag">Admission</span><span class="faq-tag">Apply</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-cta">
+        <div class="faq-cta-text">
+          <h4>Still have a question?</h4>
+          <p>Our admission team is happy to help with anything not covered above.</p>
+        </div>
+        <a href="https://angelcollege.edu.in/contact/" class="faq-cta-btn"><i class="fa-solid fa-headset"></i> Contact Us</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer id="contact" class="site-footer">
+  <span class="footer-watermark" aria-hidden="true">ACET</span>
+  <div class="container-xl">
+
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-mark">
+          <img src="https://angelcollege.edu.in/wp-content/uploads/2016/11/cropped-logo4-270x270.png" alt="Angel College of Engineering and Technology">
+          <span>Angel College of Engineering<br>and Technology</span>
+        </div>
+        <p class="footer-tagline">Tirupur's first professional degree-level institution &mdash; approved by AICTE, affiliated to Anna University, Chennai, since 2007.</p>
+        <div class="footer-contact-line"><i class="fa-solid fa-location-dot"></i> Angel Nagar, Dharapuram Main Road, P.K. Palayam, Tirupur &ndash; 641665</div>
+        <div class="footer-contact-line"><i class="fa-solid fa-envelope"></i> info@angelcollege.edu.in</div>
+        <div class="footer-contact-line"><i class="fa-solid fa-phone"></i> +91 99944 05029</div>
+        <div class="footer-social-row">
+          <a href="https://www.instagram.com/angelcollegetirupur/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://angelcollege.edu.in/angel-media/" target="_blank" rel="noopener" aria-label="Angel Media"><i class="fa-solid fa-newspaper"></i></a>
+          <a href="https://angelcollege.edu.in/photos/" target="_blank" rel="noopener" aria-label="Gallery"><i class="fa-solid fa-images"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-simple-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About ACET</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#courses">Courses Offered</a></li>
+          <li><a href="#placement">Placement</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-simple-links">
+          <li><a href="https://angelcollege.edu.in/admissions/">Admissions</a></li>
+          <li><a href="#campus-life">Life @ Angel</a></li>
+          <li><a href="https://angelcollege.edu.in/iqac/">IQAC</a></li>
+          <li><a href="https://angelcollege.edu.in/research-2/">Research</a></li>
+          <li><a href="https://angelcollege.edu.in/grievances/">Grievances</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Departments</div>
+        <ul class="footer-simple-links">
+          <li><a href="https://angelcollege.edu.in/departments/cse/">Computer Science</a></li>
+          <li><a href="https://angelcollege.edu.in/departments/ece/">Electronics &amp; Comm.</a></li>
+          <li><a href="https://angelcollege.edu.in/departments/eee/">Electrical &amp; Electronics</a></li>
+          <li><a href="https://angelcollege.edu.in/departments/mech/">Mechanical</a></li>
+          <li><a href="https://angelcollege.edu.in/departments/civil/">Civil</a></li>
+          <li><a href="https://angelcollege.edu.in/departments/ft/">Fashion Technology</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-baseline">
+      <p>&copy; <span id="yr"></span> Angel College of Engineering and Technology. All rights reserved.</p>
+      <span class="motto">You Dream, We Educate</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= ADMISSION FLYER POPUP ================= -->
+<div class="admission-popup-overlay" id="adPopupOverlay">
+  <div class="admission-popup-card">
+    <button class="admission-popup-close" id="adPopupClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <img src="https://vcenggw.ac.in/images/popup/Admission-IT-2026.jpeg" alt="Angel College of Engineering and Technology — Admissions Open 2026" class="admission-popup-flyer-img" loading="eager">
+    <div class="pop-head">
+      <i class="fa-solid fa-graduation-cap"></i>
+      <h3>Admissions Open 2026</h3>
+    </div>
+    <div class="pop-body">
+      <div class="inner">
+        <p>B.E. CSE &middot; ECE &middot; EEE &middot; Mech &middot; Civil &middot; B.Tech FT &middot; M.E. &mdash; approved by AICTE, affiliated to Anna University.</p>
+        <a href="https://angelcollege.edu.in/admissions/" id="adPopupCta" class="btn-hero-primary" style="width:100%;justify-content:center;background:var(--brand-gradient);"><i class="fa-solid fa-arrow-right"></i> Apply Now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Sync body padding-top to the topbar's real rendered height
+  const topbarEl = document.getElementById('topbarFixed');
+  function syncTopbarHeight () {
+    const h = topbarEl.offsetHeight + 'px';
+    document.body.style.paddingTop = h;
+  }
+  syncTopbarHeight();
+  requestAnimationFrame(syncTopbarHeight);
+  document.addEventListener('DOMContentLoaded', syncTopbarHeight);
+  window.addEventListener('load', syncTopbarHeight);
+  window.addEventListener('resize', syncTopbarHeight);
+  window.addEventListener('orientationchange', syncTopbarHeight);
+  if (document.fonts && document.fonts.ready) { document.fonts.ready.then(syncTopbarHeight); }
+  if (window.ResizeObserver) { new ResizeObserver(syncTopbarHeight).observe(topbarEl); }
+
+  // Desktop collapse-on-scroll + mobile hide/reveal
+  let lastScrollY = window.scrollY;
+  const mobileNavQuery = window.matchMedia('(max-width: 991.98px)');
+  window.addEventListener('scroll', function () {
+    const y = window.scrollY;
+    if (y > 60) topbarEl.classList.add('is-scrolled'); else topbarEl.classList.remove('is-scrolled');
+    if (mobileNavQuery.matches) {
+      const offcanvasOpen = document.querySelector('.offcanvas.show');
+      if (!offcanvasOpen) {
+        if (y > lastScrollY && y > 80) topbarEl.classList.add('nav-hidden');
+        else if (y < lastScrollY) topbarEl.classList.remove('nav-hidden');
+      }
+    } else { topbarEl.classList.remove('nav-hidden'); }
+    lastScrollY = y;
+  }, { passive: true });
+
+  const mobileNavEl = document.getElementById('mobileNav');
+  if (mobileNavEl) {
+    mobileNavEl.addEventListener('show.bs.offcanvas', function () { topbarEl.classList.remove('nav-hidden'); });
+  }
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 992) {
+      const el = document.getElementById('mobileNav');
+      const instance = bootstrap.Offcanvas.getInstance(el);
+      if (instance) instance.hide();
+    }
+  });
+
+  // AOS
+  AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic', offset: 60 });
+
+  // Admission popup
+  (function () {
+    const overlay = document.getElementById('adPopupOverlay');
+    const closeBtn = document.getElementById('adPopupClose');
+    const ctaLink = document.getElementById('adPopupCta');
+    if (!overlay || !closeBtn) return;
+    function openPopup () { overlay.classList.add('show'); document.body.style.overflow = 'hidden'; }
+    function closePopup () { overlay.classList.remove('show'); document.body.style.overflow = ''; }
+    setTimeout(openPopup, 900);
+    closeBtn.addEventListener('click', closePopup);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closePopup(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && overlay.classList.contains('show')) closePopup(); });
+    if (ctaLink) ctaLink.addEventListener('click', closePopup);
+  })();
+
+  // Theatre-mode YouTube video player
+  (function () {
+    const trigger = document.getElementById('acetVideoTrigger');
+    const overlay = document.getElementById('theatreOverlay');
+    const closeBtn = document.getElementById('theatreClose');
+    const iframeWrap = document.getElementById('theatreIframeWrap');
+    if (!trigger || !overlay) return;
+    function openTheatre() {
+      const videoId = trigger.getAttribute('data-video-id');
+      iframeWrap.innerHTML = '<iframe src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" title="Angel College campus tour video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="width:100%;height:100%;border:0;"></iframe>';
+      overlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeTheatre() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      setTimeout(function () { iframeWrap.innerHTML = ''; }, 400);
+    }
+    trigger.addEventListener('click', openTheatre);
+    closeBtn.addEventListener('click', closeTheatre);
+    overlay.addEventListener('click', function (e) { if (e.target === overlay) closeTheatre(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeTheatre(); });
+  })();
+
+  // FAQ accordion toggle (numbered, single-open)
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasActive = item.classList.contains('active');
+    item.closest('.faq-wrap').querySelectorAll('.faq-item').forEach(function (el) {
+      el.classList.remove('active');
+      el.querySelector('.faq-answer-wrap').style.maxHeight = null;
+    });
+    if (!wasActive) {
+      item.classList.add('active');
+      const wrap = item.querySelector('.faq-answer-wrap');
+      wrap.style.maxHeight = wrap.scrollHeight + 'px';
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    const firstFaq = document.querySelector('.faq-item.active .faq-answer-wrap');
+    if (firstFaq) firstFaq.style.maxHeight = firstFaq.scrollHeight + 'px';
+  });
+
+  // Courses Offered — Undergraduate / Postgraduate tab toggle
+  function showCourseTab(which, btn) {
+    document.querySelectorAll('.course-tab').forEach(function (el) { el.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.course-panel').forEach(function (el) { el.classList.remove('active'); });
+    const panel = document.getElementById('course-panel-' + which);
+    if (panel) panel.classList.add('active');
+  }
+
+  // Swiper - Voices (simple, one testimonial at a time)
+  new Swiper('.voices-swiper', {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: { delay: 4200, disableOnInteraction: false },
+    pagination: { el: '.voices-swiper .swiper-pagination', clickable: true }
+  });
+
+  // Swiper - Alumni Talks (3 cards on screen, responsive)
+  new Swiper('.alumni-talks-swiper', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    autoplay: { delay: 4000, disableOnInteraction: false },
+    pagination: { el: '.alumni-talks-swiper .swiper-pagination', clickable: true },
+    navigation: { nextEl: '.alumni-talks-swiper .next', prevEl: '.alumni-talks-swiper .prev' },
+    breakpoints: {
+      576: { slidesPerView: 2, spaceBetween: 22 },
+      992: { slidesPerView: 3, spaceBetween: 26 }
+    }
+  });
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 420) backToTop.classList.add('show'); else backToTop.classList.remove('show');
+  });
+  backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  // Smooth-scroll offset correction for fixed header
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId.length > 1) {
+        const target = document.querySelector(targetId);
+        if (target) {
+          e.preventDefault();
+          const offset = topbarEl.offsetHeight + 14;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+</script>
+</body>
+</html>
