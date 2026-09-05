@@ -99,6 +99,9 @@ img{max-width:100%;display:block;}
 .brand-wordmark .l1{font-family:var(--font-d);font-weight:700;font-size:clamp(1rem,1.6vw,1.35rem);color:var(--navy);}
 .brand-wordmark .l2{font-family:var(--font-d);font-weight:800;font-size:clamp(1.1rem,1.9vw,1.55rem);color:var(--crimson);}
 .brand-wordmark .l3{font-family:var(--font-b);font-weight:600;font-size:.66rem;letter-spacing:.02em;color:var(--muted);margin-top:2px;}
+.brand-name-mobile{flex-direction:column;line-height:1.22;text-align:left;}
+.brand-name-mobile .bn-line1{font-family:var(--font-d);font-weight:600;font-size:.82rem;color:var(--navy);white-space:nowrap;}
+.brand-name-mobile .bn-line2{font-family:var(--font-d);font-weight:800;font-size:.92rem;color:var(--crimson);white-space:nowrap;}
 .header-social{display:flex;align-items:center;gap:10px;}
 .header-social a{
   width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
@@ -247,8 +250,11 @@ img{max-width:100%;display:block;}
 .acet-offcanvas{z-index:1057;}
 @media(max-width:767.98px){
   .header-inner{flex-wrap:wrap;}
-  .brand-block{width:100%;justify-content:center;}
-  .brand-logo{height:clamp(48px,14vw,64px);max-width:70%;}
+  .brand-block{width:100%;justify-content:center;gap:12px;}
+  .brand-logo{
+    height:44px;width:44px;object-fit:cover;border-radius:12px;background:#fff;
+    padding:3px;border:1px solid rgba(11,31,77,.14);box-shadow:0 4px 12px rgba(7,19,48,.14);
+  }
   .header-cta{width:100%;justify-content:center;}
 }
 
@@ -970,6 +976,10 @@ img{max-width:100%;display:block;}
         <span class="l1">Angel College of</span>
         <span class="l2">Engineering &amp; Technology</span>
         <span class="l3">Approved by AICTE &middot; Affiliated to Anna University, Chennai &middot; Est. 2007</span>
+      </span>
+      <span class="brand-name-mobile d-flex d-md-none">
+        <span class="bn-line1">Angel College of</span>
+        <span class="bn-line2">Engineering &amp; Technology</span>
       </span>
     </a>
    <!-- <div class="header-social d-none d-md-flex">
